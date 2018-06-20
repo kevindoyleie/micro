@@ -1,0 +1,38 @@
+{
+  "name": "mental-health-hub",
+  "version": "1.0.0",
+  "description": "Mental Health Hub website",
+  "author": "Kevin Doyle",
+  "contributors": [
+    {
+      "name": "Kevin Doyle",
+      "email": "doyle_k@ex1.vhi.ie"
+    }
+  ],
+  "devDependencies": {
+    "bootstrap-less": "^3.3.8",
+    "connect-livereload": "^0.6.0",
+    "grunt": "^1.0.1",
+    "grunt-connect-proxy": "^0.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-webpack": "^3.0.2",
+    "load-grunt-tasks": "^3.5.2",
+    "moment": "^2.21.0",
+    "ouibounce": "0.0.12",
+    "slick-carousel": "^1.8.1",
+    "webpack": "^3.11.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "jquery-validation": "^1.17.0",
+    "loglevel": "^1.5.1",
+    "path": "^0.12.7"
+  }
+}
