@@ -1,0 +1,345 @@
+extends ./includes/layout
+
+block extraCss
+    link(rel="stylesheet" href="styles/understanding-irish-mental-health.min.css")
+
+block bodyContent
+    #page-container.container
+        include sections/nav
+        #fade.fade_overlay
+        #understanding-irish-mental-health.row
+            .col-xs-12.col-sm-12
+                .title Understanding Irish Mental Health Services
+                .description If you find you need help, it can be difficult to know where to go.  Get information on the different kinds of other supports and information available in Ireland.
+        .information-panel
+            .information-panel-inner
+                .title What are the services I can access directly?
+                .description There are a number of services that you may access directly, these include:
+                .gp
+                    .gp-inner
+                        .icon-and-title
+                            .icon
+                            .title Your GP
+                                span#gp-down-toggle.glyphicon.glyphicon-menu-right
+                                span#gp-up-toggle.glyphicon.glyphicon-menu-down(style="display: none;")
+                        .gp-hidden(style="display: none;")
+                            .description Your family doctor is usually the first person to approach in relation to mental health concerns. Many people attend their General Practitioner (GP) with mental health problems such as depression or anxiety and may not need the help of a mental health professional. In other cases the GP may decide to refer you to the community mental health team. In an emergency situation, when your GP is not available, you may access the Mental Health Services through the accident and emergency department in your local hospital.
+                            .link You can find a list of support GP's across Ireland
+                                a(href="https://www.icgp.ie/go/find_a_gp" target="_blank") here.
+                .help-lines
+                    .help-lines-inner
+                        .icon-and-title
+                            .icon
+                            .title Help Lines
+                                span#help-down-toggle.glyphicon.glyphicon-menu-right
+                                span#help-up-toggle.glyphicon.glyphicon-menu-down(style="display: none;")
+                        .help-hidden(style="display: none;")
+                            .description If you need to talk to someone, here are a number of helplines you can contact for confidential non-judgemental support.
+                            table
+                                tr
+                                    th
+                                        .organisation-contact-info
+                                            .type TALK ABOUT ANYTHING
+                                            .org The Samaritans
+                                            .site
+                                                a(href="https://www.samaritans.org/" target="_blank") www.samaritans.org
+                                            .phone Free phone:
+                                                a(href="tel:116123") 116 123
+                                            .email Email:
+                                                a.link-space(href="mailto:jo@samaritans.org" target="_top") jo@samaritans.org
+                                    th
+                                        .organisation-contact-info
+                                            .type Depression, Bipolar Disorder & Anxiety
+                                            .org Aware
+                                            .site
+                                                a(href="https://www.aware.ie/" target="_blank") www.aware.ie
+                                            .phone Tel:
+                                                a.link-space(href="tel:1800804848") 1800 80 48 48
+                                            .email Email:
+                                                a.link-space(href="mailto:supportmail@aware.ie" target="_top") supportmail@aware.ie
+                                tr
+                                    th
+                                        .organisation-contact-info
+                                            .type SUICIDE & SELF-HARM
+                                            .org Pieta House
+                                            .address National Suicide Helpline (Pieta House)
+                                            .phone
+                                                a(href="tel:1800247247") 1800 247 247
+                                            .site
+                                                a(href="http://www.pieta.ie/" target="_blank") www.pieta.ie
+                                            .phone Tel:
+                                                a.link-space(href="tel:016235606") 01 623 5606
+                                    th
+                                        .organisation-contact-info
+                                            .type Mental Health support and Recovery
+                                            .org Grow
+                                            .site
+                                                a(href="http://grow.ie/" target="_blank") www.grow.ie
+                                            .phone Tel:
+                                                a.link-space(href="tel:1890474474") 1890 474 474
+                                tr
+                                    th
+                                        .organisation-contact-info
+                                            .type Peer advocacy in mental health
+                                            .org Irish Advocacy Network
+                                            .site
+                                                a(href="http://irishadvocacynetwork.com/" target="_blank") www.irishadvocacynetwork.com
+                                            .phone Tel:
+                                                a.link-space(href="tel:018728684") 01 872 8684
+                                    th
+                                        .organisation-contact-info
+                                            .type EATING DISORDERS
+                                            .org Bodywhys
+                                            .site
+                                                a(href="https://www.bodywhys.ie/" target="_blank") www.bodywhys.ie
+                                            .phone
+                                                a(href="tel:1890200444") 1890 200 444
+                                tr
+                                    th
+                                        .organisation-contact-info
+                                            .type Sexuality
+                                            .org Gay Switchboard Dublin
+                                            .site
+                                                a(href="http://www.gayswitchboard.ie" target="_blank") gayswitchboard.ie
+                                            .phone Helpline:
+                                                a.link-space(href="tel:018721055") 01 872 1055
+                                    th
+                                        .organisation-contact-info
+                                            .type Parentline
+                                            .org Parentline
+                                            .site
+                                                a(href="http://www.parentline.ie/" target="_blank") parentline.ie
+                                            .phone Helpline:
+                                                a.link-space(href="tel:1890927277") 1890 92 72 77
+                                                |  or
+                                                a.link-space(href="tel:018733500") 01 873 3500
+                                tr
+                                    th
+                                        .organisation-contact-info
+                                            .type Abuse, domestic violence & rape
+                                            .org Amen Support Services Ltd.
+                                            .site
+                                                a(href="http://www.amen.ie/" target="_blank") amen.ie
+                                            .phone Helpline:
+                                                a.link-space(href="tel:0469023718") 046 902 3718
+                                    th
+                                        .organisation-contact-info
+                                            .org Aoibhneas Women and Children's Refuge
+                                            .site
+                                                a(href="http://www.aoibhneas.ie/" target="_blank") aoibhneas.ie
+                                            .phone Helpline:
+                                                a.link-space(href="tel:018670701") 01 867 0701
+                                tr
+                                    th
+                                        .organisation-contact-info
+                                            .type Children at risk in Ireland (CARI)
+                                            .org CARI
+                                            .site
+                                                a(href="http://www.cari.ie/" target="_blank") cari.ie
+                                            .phone Helpline:
+                                                a.link-space(href="tel:1890924567") 1890 92 45 67
+                                    th
+                                        .organisation-contact-info
+                                            .type Rape Crisis Help
+                                            .org Rape Crisis Network Ireland
+                                            .site
+                                                a(href="http://www.rapecrisishelp.ie/" target="_blank") rapecrisishelp.ie
+                                            .phone 24 Hour Helpline:
+                                                a.link-space(href="tel:1800778888") 1800 77 88 88
+                                tr
+                                    th
+                                        .organisation-contact-info
+                                            .type Women's Aid
+                                            .org Rape Crisis Network Ireland
+                                            .site
+                                                a(href="https://www.womensaid.ie/" target="_blank") womensaid.ie
+                                            .phone Freephone:
+                                                a.link-space(href="tel:1800341900") 1800 34 19 00
+                                    th
+                                        .organisation-contact-info
+                                            .org The Dublin Rape Crisis Centre
+                                            .site
+                                                a(href="http://www.drcc.ie/get-help-and-information/our-services/helpline/" target="_blank") drcc.ie/get-help-and-information/helpline/
+                                            .phone 24 Hour Helpline:
+                                                a.link-space(href="tel:1800778888") 1800 77 88 88
+                                            .email Email:
+                                                a.link-space(href="mailto:counselling@rcc.ie" target="_top") counselling@rcc.ie
+                .support-groups
+                    .support-groups-inner
+                        .icon-and-title
+                            .icon
+                            .title Support Groups
+                                span#support-groups-down-toggle.glyphicon.glyphicon-menu-right
+                                span#support-groups-up-toggle.glyphicon.glyphicon-menu-down(style="display: none;")
+                        .support-groups-hidden(style="display: none;")
+                            .description There are a number of groups that provide information on specific mental health conditions such as schizophrenia or eating disorders. Other groups provide support for issues that may impact upon your mental health such as addiction, bereavement, financial problems, or sexuality.
+                            .support-below You can find a list of support groups below.
+                            .support-list
+                                .support-group
+                                    .title Shine's Support Groups
+                                    .description Shine runs a nationwide network of self-help and support groups which aim to support and empower people with schizophrenia and other related mental health conditions as well as holding regular support meetings for adults. Find out more about Shines Supports Group
+                                        a(href="https://www.shine.ie/services/support-groups/" target="_blank") here.
+                                .support-group
+                                    .title Aware's Support Groups
+                                    .description Aware has support groups around the country for adults experiencing mental health difficulties. Find your local group
+                                        a(href="https://www.aware.ie/services/support-groups/" target="_blank") here.
+                                .support-group
+                                    .title Grow's Support Groups
+                                    .description Grow has a nationwide network of support groups for young adults (defined by Grow as 18-30 years) as well as holding regular support meetings for adults. You can find a meeting in your county
+                                        a(href="http://grow.ie/how-we-help/" target="_blank") here.
+                                .support-group
+                                    .title Gateway Mental Health Project
+                                    .description Gateway is a community based member led project for people with self-experience of mental health difficulties and welcomes new members from the Dublin 4, 6, 6W, 12 and 14. You can find more information on the Gateway Mental Health Project
+                                        a(href="http://projectgateway.blogspot.ie/" target="_blank") here.
+                .workshops
+                    .workshops-inner
+                        .icon-and-title
+                            .icon
+                            .title Workshops & Online Programmes
+                                span#workshops-down-toggle.glyphicon.glyphicon-menu-right
+                                span#workshops-up-toggle.glyphicon.glyphicon-menu-down(style="display: none;")
+                        .workshops-hidden(style="display: none;")
+                            .support-description There are a number workshops and online programmes open to individuals, workplaces and communities all over Ireland.
+                                br
+                                | You can find a list of workshops & online programmes below.
+                            .support-list
+                                .support-group
+                                    .title Shine's 'Taking Control' Workshop
+                                    .description Shine offers a 'Taking Control' workshop that you attend in person. The workshop aims to build resilience and help you to confront challenges by supporting you to develop action plans to cope with stressors and setbacks. It also aims to build your self-belief and confidence.
+                                        br
+                                        | For more information on Shines 'Taking Control' workshop click
+                                        a(href="https://www.shine.ie/services/training-and-education-programmes/" target="_blank") here.
+                                .support-group
+                                    .title Suicide or Survive 'Wellness Workshops'
+                                    .description Suicide or Survive hold one-day long 'Wellness Workshops'. These workshops aim to give you the space to explore your own mental health and include presentations from people who have self-experience of mental health difficulties. People who have attended the workshops report that they found them engaging, inspiring and informative. For more details please on the Wellness Workshops please visit
+                                        a(href="http://www.suicideorsurvive.ie/wrap/" target="_blank") SuicideorSurvive.ie.
+                                .support-group
+                                    .title Suicide or Survive 'Eden Programme'
+                                    .description Suicide or Survive also hold the 'Eden Programme', which is run in conjunction with Shine and Mental Health Ireland.  The Eden programme provides a supportive space for anyone who is thinking of taking their own life, or for anyone who has attempted suicide.The Eden programme involves attending weekly group meetings over six months. You can find more information on The Eden Programme by clicking
+                                        a(href="http://www.suicideorsurvive.ie/the-eden-program/" target="_blank") here.
+                                .support-group
+                                    .title Grow's 'Mental Health Education Programme'
+                                    .description Grow runs a 'Mental Health Education Programme' that holds informative talks and questions-and-answers sessions that aim to stimulate thinking around the relevance of mental health to our lives and the importance of actively promoting positive mental health in ourselves and others.
+                                        br
+                                        | For more details on these events, visit the
+                                        a(href="http://grow.ie/" target="_blank") Grow website.
+                                .support-group
+                                    .title Aware's online Life Skills Programme'
+                                    .description Life Skills Online is a free educational programme from Aware which is delivered online. With the help of a series of easy-to-follow modules and support from a trained Aware volunteer, participants can learn how to manage feelings of stress, worry, anxiety or depression, and learn simple and practical skills to help them cope with life’s challenges. For more details on Aware’s online Life Skills programme click
+                                        a(href="https://www.aware.ie/services/life-skills-online-programme/" target="_blank") here.
+                                .support-group
+                                    .title MyMind Workshop Webpage
+                                    .description MyMind hosts a number of workshops that aim to enhance mental health. To find out more, visit the
+                                        a(href="https://mymind.org/" target="_blank") MyMind website.
+                                .support-group
+                                    .title National Learning Network Programmes
+                                    .description National Learning Network delivers a range of best practice mental health services incorporating a recovery ethos. Mental health services include Personal Recovery Programmes (including WRAP etc) and as well as Wellness for Mental Health Programmes. Services are available in the community and all of its managers, instructors, rehabilitation officers, resource teachers, social skills facilitators, psychologists and advocacy officers have had extensive training in the field of mental health promotion and recovery. For more information visit
+                                        a(href="http://www.nln.ie/Courses-for-Job-Seekers.aspx" target="_blank") http://www.nln.ie/Courses-for-Job-Seekers.aspx.
+                                .support-group
+                                    .title ASIST and Safetalk Training
+                                    .description ASIST (Applied Suicide Intervention Skills Training) is a two-day training course that provides participants with the confidence and skills to intervene with someone at risk of suicide, alleviate the immediate risk of suicide and refer to appropriate services specific to the needs of that person. Safe TALK is a programme that teaches participants how to recognise people with thoughts of suicide and how to link them with suicide intervention resources, e.g. people who are trained in the ASIST programme. For more details on ASIST and SafeTALK please visit
+                                        a.link-space(href="https://oasiscentre.ie/workshops/" target="_blank") https://oasiscentre.ie/workshops/.
+                                .support-group
+                                    .title ‘Wellness Recovery Action Plan’ (WRAP)
+                                    .description The Wellness Recovery Action Plan (WRAP) is a tool for self-management that is designed to help you with your recovery. Designed by a group of people who have self-experience of mental health difficulties, the WRAP resources help you to develop personal plans that some say have helped them stick to recovery strategies and achieve long-term stability. Click
+                                        a(href="http://www.suicideorsurvive.ie/wrap/" target="_blank") here
+                                        |  to find out more about the WRAP programme.
+                .youth-services
+                    .youth-services-inner
+                        .icon-and-title
+                            .icon
+                            .title Support Services for Youths
+                                span#youth-services-down-toggle.glyphicon.glyphicon-menu-right
+                                span#youth-services-up-toggle.glyphicon.glyphicon-menu-down(style="display: none;")
+                        .youth-services-hidden(style="display: none;")
+                            .support-description If you are a young person, the organisations listed below provide lots of information and support for getting through life’s ups and downs.
+                            .support-list
+                                .support-group
+                                    .title REACHOUT
+                                    .description This website is run by Inspire Ireland, one of the four organisations involved in the HORIZONS study. ReachOut.com is about supporting young people to help themselves through tough times and find ways to improve their own mental health and well-being. This website has over 300 factsheets on issues related to mental health as well as videos, access to an on-line community and blogs. ReachOut.com also has a mental fitness App called WorkOut which targets thinking in relation to problem-solving, getting time to do the things you enjoy, identifying your social support networks and lots more.
+                                    a.website(href="https://ie.reachout.com/" target="_blank") ie.reachout.com
+                                .support-group
+                                    .title SPUNOUT
+                                    .description SpunOut is a website with information and blogs about a range of issues relevant to people aged 16-25. It includes information about health and mental health issues as well as details of local support services around Ireland. They also have a mood monitoring App for smartphones called MiYo.
+                                    a.website(href="https://spunout.ie/" target="_blank") www.spunout.ie
+                                .support-group
+                                    .title AWARE
+                                    .description Aware is a national voluntary organisation that aims to support people who are experiencing depression. The site contains information and tips on coping with depression. It also contains details of support groups and services for people with depression.
+                                    a.website(href="https://www.aware.ie/" target="_blank") www.aware.ie
+                                    .phone-number Tel:
+                                        a(href="tel:1800804848")  1800 80 48 48
+                                .support-group
+                                    .title BODYWHYS
+                                    .description Bodywhys aims to support people with eating disorders and their families. The site has information and links to services and supports, including details of a lo-call helpline
+                                    a.website(href="https://www.bodywhys.ie/" target="_blank") www.bodywhys.ie
+                                    .phone-number Tel:
+                                        a(href="tel:1890200444")  1890 200 444
+                                .support-group
+                                    .title CHILDLINE
+                                    .description Childline is a 24 hour listening service for all children up to the age of 18.
+                                    a.website(href="https://www.childline.ie/" target="_blank") www.childline.ie
+                                    .phone-number Tel:
+                                        a(href="tel:1800666666")  1800 666 666
+                                .support-group
+                                    .title JIGSAW
+                                    .description This is the website of the Headstrong (www.headstrong.com) community-based mental health support service known as Jigsaw. Jigsaw provides free mental health support to young people in their teenage and young adult years. The website gives details on the 10 communities in Ireland who currently have a Jigsaw service and on how to contact or self-refer to those services.
+                                    a.website(href="https://www.jigsaw.ie/" target="_blank") www.jigsaw.ie
+                                    .phone-number Tel:
+                                        a(href="tel:35314727010")  +353 1 472 7010
+                                .support-group
+                                    .title MY MIND: CENTRE FOR MENTAL WELLBEING
+                                    .description MyMind is a not-for-profit service that aims to provide affordable counselling and therapy services to people (students can attend for €20 per session). It has centres in Dublin, Cork and Limerick and has counsellors who are fluent in English, Polish, Italian, Portuguese, Spanish and German. It also offers some on-line support.
+                                    a.website(href="https://mymind.org/" target="_blank") www.mymind.org
+                                    .phone-number Tel:
+                                        a(href="tel:353766801060")  +353 76 680 1060
+                                .support-group
+                                    .title PIETA HOUSE: CENTRE FOR THE PREVENTION OF SUICIDE OR SELF-HARM
+                                    .description Pieta House is a service that supports people who self-harm or feel suicidal. They have a helpline and provide counselling for people who self-harm or who are having suicidal thoughts.
+                                    a.website(href="http://www.pieta.ie/" target="_blank") www.pieta.ie
+                                    .phone-number Tel:
+                                        a(href="tel:1800247247")  1800 247 247
+                                .support-group
+                                    .title SAMARITANS
+                                    .description Samaritans is an organisation that provides confidential non-judgemental emotional support, 24 hours a day for people who are experiencing feelings of distress or despair, including those which could lead to suicide. They provide telephone, text and individual support to people in distress.
+                                    a.website(href="https://www.samaritans.org/" target="_blank") www.samaritans.org
+                                    .phone-number Free call:
+                                        a(href="tel:116123")  116 123
+                                    .phone-number Text:
+                                        a(href="sms:0872609090")  087 2609090
+                                .support-group
+                                    .title TURN2ME
+                                    .description Turn2Me is a web-based mental health support service that aims to help people to get help. As part of the service, Turn2Me offers on-line support groups and counselling.
+                                    a.website(href="https://turn2me.org/" target="_blank") www.turn2me.ie
+                                .support-group
+                                    .title YOUR MENTAL HEALTH
+                                    .description This is the new HSE mental health information website. It offers tips about how to look after your mental health, including those from the ‘Little Things’ campaign launched in 2014.
+                                    a.website(href="http://www.yourmentalhealth.ie/" target="_blank") www.yourmentalhealth.ie
+                .counselling-psychotherapy-services
+                    .counselling-psychotherapy-services-inner
+                        .icon-and-title
+                            .icon
+                            .title Private Counselling & Psychotherapy Services
+                                span#counselling-psychotherapy-services-down-toggle.glyphicon.glyphicon-menu-right
+                                span#counselling-psychotherapy-services-up-toggle.glyphicon.glyphicon-menu-down(style="display: none;")
+                        .counselling-psychotherapy-services-hidden(style="display: none;")
+                            .description A list of accredited counsellors and psychotherapists throughout Ireland may be found on the following website;
+                            .support-list
+                                .support-group
+                                    .title THE IRISH ASSOCIATION FOR COUNSELLING AND PSYCHOTHERAPY (IACP)
+                                    a.description(href="https://iacp.ie/" target="_blank") www.iacp.ie
+                                .support-group
+                                    .title THE IRISH COUNCIL FOR PSYCHOTHERAPY (ICP)
+                                    a.description(href="http://www.psychotherapycouncil.ie/" target="_blank") www.psychotherapycouncil.ie
+                                .support-group
+                                    .title THE PSYCHOLOGICAL SOCIETY OF IRELAND (PSI)
+                                    a.description(href="https://www.psychologicalsociety.ie/" target="_blank") www.psychologicalsociety.ie
+                            .disclaimer
+                                p Please note:
+                                p This list is not exhaustive.
+                                p Not all mental health support services and websites are included.
+            .back-button
+                a#back-btn(href="/mentalhealthhub/") Back
+
+    include sections/footer
+block extraJs
+    script(src="scripts/understanding-mental-health.js")
