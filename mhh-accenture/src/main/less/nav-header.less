@@ -1,0 +1,115 @@
+@import "components/base-styles";
+
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    border: none;
+    min-height: 80px;
+    .navbar-header {
+        height: 80px;
+        @media (max-width: @screen-xs-max) {
+            height: 50px;
+        }
+        .navbar-brand {
+            padding: 19px 15px;
+            @media (max-width: @screen-xs-max) {
+                padding: 10px;
+            }
+            #logo {
+                align-self: center;
+                width: auto;
+                height: 29px;
+                @media (min-width: @screen-sm-min) {
+                    height: 52px;
+                }
+                @media (max-width: @screen-sm-min) {
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+            }
+            @media (max-width: @screen-sm-min) {
+                float: none;
+            }
+        }
+        .navbar-support {
+            float: right;
+            padding: 18px 15px;
+            height: 48px;
+            #nav-get-support-now {
+                align-self: center;
+                cursor: pointer;
+                height: 29px;
+                width: auto;
+                @media (min-width: @screen-sm-min) {
+                    height: 43px;
+                }
+            }
+            @media (max-width: @screen-sm-min) {
+                display: none;
+            }
+        }
+    }
+}
+
+#top-nav-bar-menu {
+    background-color: white;
+    box-shadow: 0 1px 6px 0 @dark-gray;
+    text-align: center;
+    top: 80px;
+    #bs-example-navbar-collapse-1 {
+        max-height: 903px;
+        @media (max-width: @screen-sm-min) {
+            ul.navbar-nav {
+                margin: 0px -15px;
+                li {
+                    border-bottom: solid 1px #f5f5f5;
+                }
+            }
+        }
+        .navbar-nav {
+            display: table;
+            width: 100%;
+            @media (max-width: @screen-xs-min) {
+                width: auto;
+            }
+            li {
+                display: table-cell;
+                float: none;
+                div {
+                    .content-8;
+                    opacity: 0.5;
+                    margin: 17px 70px 16px;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 1;
+                    }
+                    @media (max-width: @screen-sm-min) {
+                        margin: 10px 15px 10px;
+                    }
+                }
+            }
+            a {
+                font-size: 11px;
+            }
+            > li.with-button a {
+                padding: 6px 10px;
+            }
+            > li > a {
+                padding: 0 16px;
+                line-height: 52px;
+            }
+            .navbar-btn {
+                background-color: @light-purple;
+                .box-shadow(3px 3px 0px 0px rgba(50, 50, 50, 0.25));
+                text-align: center;
+                padding: 4px 8px;
+                line-height: 1em;
+                margin: 0;
+            }
+        }
+    }
+}

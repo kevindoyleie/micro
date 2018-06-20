@@ -1,0 +1,76 @@
+  .opacity(@opacity) {
+  @ieOpacity: @opacity * 100;
+  // If you don't use this order, IE8-as-IE7 doesn't apply the opacity, although IE8 and a pure IE7 do.
+  // http://www.quirksmode.org/css/opacity.html
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieOpacity})"; // IE 8
+  filter: ~"alpha(opacity=@{ieOpacity})"; // IE 5-7
+  opacity: @opacity;
+}
+
+.border-radius (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius:    @radius;
+  border-radius:         @radius;
+
+  -moz-background-clip:    padding;
+  -webkit-background-clip: padding-box;
+  background-clip:         padding-box;
+}
+
+.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+  -webkit-border-top-right-radius:    @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius:  @bottomleft;
+  -webkit-border-top-left-radius:     @topleft;
+
+  -moz-border-radius-topright:        @topright;
+  -moz-border-radius-bottomright:     @bottomright;
+  -moz-border-radius-bottomleft:      @bottomleft;
+  -moz-border-radius-topleft:         @topleft;
+
+  border-top-right-radius:            @topright;
+  border-bottom-right-radius:         @bottomright;
+  border-bottom-left-radius:          @bottomleft;
+  border-top-left-radius:             @topleft;
+
+  -moz-background-clip:    padding;
+  -webkit-background-clip: padding-box;
+  background-clip:         padding-box;
+}
+
+.box-shadow (@string) {
+  -webkit-box-shadow: @string;
+  -moz-box-shadow:    @string;
+  box-shadow:         @string;
+}
+
+.rgba(@colour, @alpha) {
+  @alphaColour: hsla(hue(@colour), saturation(@colour), lightness(@colour), @alpha);
+  @ieAlphaColour: argb(@alphaColour);
+
+  background-color: @colour; // Fallback for older browsers
+  background-color: @alphaColour;
+
+
+  // IE hacks
+  .lt-ie9 & {
+    zoom: 1; // hasLayout
+    background-color: transparent;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; // IE 8+
+    filter:  ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})";  // IE 6 & 7
+  }
+}
+
+.background-image(@src) {
+  @src-filter: replace(@src, "../", "");
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src=@src-filter, sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='@{src-filter}', sizingMethod='scale')";
+  background: url(@src);
+  background-size: 100% 100%;
+}
+
+.background-image-no-scale-retina(@src) {
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src=@src, sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='@{src}', sizingMethod='scale')";
+  background: url(@src);
+}

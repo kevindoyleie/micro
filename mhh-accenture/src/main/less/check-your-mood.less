@@ -1,0 +1,936 @@
+@import "components/base-styles";
+
+#check-your-mood {
+    margin-top: 50px;
+    @media (max-width: @screen-xs-min) {
+        margin-top: 70px;
+    }
+    .title {
+        margin-top: 36px;
+        .header-4;
+    }
+    .description {
+        margin-top: 25px;
+        .content-3;
+    }
+    .button-container {
+        @media (max-width: @screen-xs-min) {
+            text-align: center;
+        }
+    }
+    .panel-5 {
+        background-image: url("../images/stefan-stefancik-297983-unsplash.jpg");
+        background-size: 200%;
+        background-position-y: 40%;
+        background-position-x: center;
+        box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.25);
+        height: 250px;
+    }
+    .white {
+        background-color: white;
+        box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.25);
+        height: 250px;
+        #check-mood-btn {
+            .button-white-smoke;
+            display: inline-block;
+            margin-bottom: 36px;
+            margin-top: 41px;
+        }
+    }
+}
+
+#check-mood-popup {
+    background-color: @white;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 150px;
+    width: 864px;
+    z-index: 1000;
+    @media (max-width: @screen-sm-min) {
+        height: auto;
+        width: 100%;
+    }
+    @media (max-width: @screen-sm-min) {
+        top: 127px;
+    }
+    .popup-icon {
+        background: url("../images/icons/check-mood.png") center;
+        background-image:
+                -webkit-image-set(
+                        url("../images/icons/check-mood@2x.png") 2x,
+                        url("../images/icons/check-mood@3x.png") 3x,
+                );
+        background-image:
+                image-set(
+                        url("../images/icons/check-mood@2x.png") 2x,
+                        url("../images/icons/check-mood@3x.png") 3x,
+                );
+        height: 67px;
+        width: 67px;
+        background-size: contain;
+        display: inline-block;
+        text-align: center;
+    }
+    .popup-title {
+        .content-8;
+        margin-top: 10px;
+    }
+    .popup-description {
+        .content-19;
+        left: 0;
+        right: 0;
+        margin: 10px auto 0;
+        width: 579px;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .popup-results-description {
+        .content-19;
+        left: 0;
+        right: 0;
+        margin: 10px auto 0;
+        width: 760px;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .mood-test-container {
+        border: solid 1px @vhi-light-grey;
+        left: 0;
+        right: 0;
+        margin: 28px auto 30px;
+        width: 760px;
+        @media (max-width: @screen-sm-min) {
+            margin: 28px 0 54px;
+            width: 100%;
+        }
+        @media (max-width: @screen-xs-min) {
+            border: none;
+            border-top: solid 1px @vhi-light-grey;
+            margin-top: 28px;
+            margin-bottom: 0;
+            width: 100%;
+        }
+        #mood-test-panel-1 {
+            height: 310px;
+            @media (max-width: @screen-xs-min) {
+                height: auto;
+            }
+            .mood-test-description {
+                left: 0;
+                right: 0;
+                margin: 32px auto 0;
+                width: 678px;
+                .content-6;
+                @media (max-width: @screen-xs-min) {
+                    height: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 90%;
+                }
+            }
+            #start-mood-test-btn {
+                margin-top: 25px;
+                height: 45px;
+                .button-orange;
+            }
+            .test-time {
+                margin-top: 25px;
+                .content-7;
+                color: @pumpkin;
+                @media (max-width: @screen-xs-min) {
+                    margin-bottom: 14px;
+                }
+            }
+            .disclaimer-text {
+                margin: 25px auto 0;
+                left: 0;
+                right: 0;
+                .content-7;
+                width: 678px;
+                @media (max-width: @screen-xs-min) {
+                    height: auto;
+                    width: 90%;
+                    margin: 25px auto;
+                }
+            }
+        }
+        #mood-test-panel-2 {
+            display: inline-flex;
+            height: 558px;
+            width: 100%;
+            @media (max-width: @screen-xs-min) {
+                display: inline-block;
+                height: auto;
+            }
+            .iframe-container {
+                width: 454px;
+                @media (max-width: @screen-xs-min) {
+                    width: 100%;
+                }
+                #assessment_webpart_wrapper {
+                    left: 0;
+                    right: 0;
+                    margin: 28px auto 0;
+                    width: 362px;
+                    @media (max-width: @screen-xs-min) {
+                        height: 690px;
+                        width: 100%;
+                    }
+                    #nhs-iframe {
+                        height:515px;
+                        width:100%;
+                        @media (max-width: @screen-xs-min) {
+                            height: 610px;
+                            width: 90%;
+                        }
+                    }
+                    #assessment_webpart_branding {
+                        a {
+                            img {
+                                @media (max-width: @screen-xs-min) {
+                                    height: auto;
+                                }
+                            }
+                        }
+                        @media (max-width: @screen-xs-min) {
+                            height: auto;
+                        }
+                    }
+                }
+                @media (max-width: @screen-xs-min) {
+                    width: 100%;
+                }
+            }
+            .button-container {
+                background-color: @white-smoke;
+                width: 306px;
+                @media (max-width: @screen-xs-min) {
+                    width: 100%;
+                }
+                .popup-button {
+                    border: 1px solid #9e9a9f;
+                    height: 45px;
+                    width: 200px;
+                    padding: 9px !important;
+                    .button-support-now;
+                }
+                #mood-call-now-btn {
+                    margin-top: 107px;
+                    @media (max-width: @screen-xs-min) {
+                        margin-top: 36px;
+                    }
+                    .icon {
+                        background: rgba(0, 0, 0, 0) url("../images/icons/phone.png") no-repeat scroll 0 0;
+                        background-image:
+                                -webkit-image-set(
+                                        url("../images/icons/phone@2x.png") 2x,
+                                        url("../images/icons/phone@3x.png") 3x,
+                                );
+                        background-image:
+                                image-set(
+                                        url("../images/icons/phone@2x.png") 2x,
+                                        url("../images/icons/phone@3x.png") 3x,
+                                );
+                        display: inline-flex;
+                        height: 20px;
+                        margin-left: 11px;
+                        width: 20px;
+                    }
+                }
+                #mood-callback-btn {
+                    margin-top: 30px;
+                    .icon {
+                        background: rgba(0, 0, 0, 0) url("../images/icons/phone.png") no-repeat scroll 0 0;
+                        background-image:
+                                -webkit-image-set(
+                                        url("../images/icons/phone@2x.png") 2x,
+                                        url("../images/icons/phone@3x.png") 3x,
+                                );
+                        background-image:
+                                image-set(
+                                        url("../images/icons/phone@2x.png") 2x,
+                                        url("../images/icons/phone@3x.png") 3x,
+                                );
+                        display: inline-flex;
+                        height: 20px;
+                        margin-left: 11px;
+                        width: 20px;
+                    }
+                }
+                #mood-web-chat-btn {
+                    margin-top: 30px;
+                    .icon {
+                        background: rgba(0, 0, 0, 0) url("../images/icons/chat.png") no-repeat scroll 0 0;
+                        background-image:
+                                -webkit-image-set(
+                                        url("../images/icons/chat@2x.png") 2x,
+                                        url("../images/icons/chat@3x.png") 3x,
+                                );
+                        background-image:
+                                image-set(
+                                        url("../images/icons/chat@2x.png") 2x,
+                                        url("../images/icons/chat@3x.png") 3x,
+                                );
+                        display: inline-flex;
+                        height: 20px;
+                        margin-left: 11px;
+                        width: 20px;
+                    }
+                }
+                #mood-video-chat-btn {
+                    margin-top: 30px;
+                    .icon {
+                        background: rgba(0, 0, 0, 0) url("../images/icons/video-chat.png") no-repeat scroll 0 0;
+                        background-image:
+                                -webkit-image-set(
+                                        url("../images/icons/video-chat@2x.png") 2x,
+                                        url("../images/icons/video-chat@3x.png") 3x,
+                                );
+                        background-image:
+                                image-set(
+                                        url("../images/icons/video-chat@2x.png") 2x,
+                                        url("../images/icons/video-chat@3x.png") 3x,
+                                );
+                        display: inline-flex;
+                        height: 13px;
+                        margin-left: 11px;
+                        width: 24px;
+                    }
+                }
+                #mood-book-appointment-btn {
+                    margin-top: 30px;
+                    width: 243px;
+                    @media (max-width: @screen-xs-min) {
+                        margin-bottom: 45px;
+                    }
+                    .icon {
+                        background: rgba(0, 0, 0, 0) url("../images/icons/cal-icon.png") no-repeat scroll 0 0;
+                        background-image:
+                                -webkit-image-set(
+                                        url("../images/icons/cal-icon@2x.png") 2x,
+                                        url("../images/icons/cal-icon@3x.png") 3x,
+                                );
+                        background-image:
+                                image-set(
+                                        url("../images/icons/cal-icon@2x.png") 2x,
+                                        url("../images/icons/cal-icon@3x.png") 3x,
+                                );
+                        display: inline-flex;
+                        height: 21px;
+                        margin-left: 11px;
+                        width: 19px;
+                    }
+                }
+            }
+        }
+    }
+    #mood-test-done-btn {
+        height: 45px;
+        .button-orange;
+        margin-bottom: 30px;
+    }
+}
+
+#mood-call-now-popup {
+    position: absolute;
+    top: 180px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: @white;
+    z-index: 1000;
+    height: auto;
+    width: 500px;
+    @media (max-width: @screen-xs-min) {
+        height: auto;
+        top: 950px;
+        width: 100%;
+    }
+    .exit-popup {
+        background: rgba(0, 0, 0, 0) url("../images/icons/x-grey-small.png") no-repeat scroll 0 0;
+        background-image:
+                -webkit-image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        background-image:
+                image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        cursor: pointer;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right:14px;
+        height: 10px;
+        width: 10px;
+    }
+    .popup-title {
+        margin-bottom: 29px;
+        margin-top: 0;
+        .icon {
+            background: rgba(0, 0, 0, 0) url("../images/icons/phone.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/icons/phone@2x.png") 2x,
+                            url("../images/icons/phone@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/icons/phone@2x.png") 2x,
+                            url("../images/icons/phone@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 20px;
+            margin-left: 11px;
+            width: 20px;
+        }
+    }
+    .disclaimer-text {
+        right: 0;
+        left: 0;
+        margin: auto auto 35px;
+        width: 429px;
+        .content-10;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        p {
+            margin: 0;
+            @media (max-width: @screen-xs-min) {
+                margin: 12px;
+            }
+        }
+    }
+    .call-now-number {
+        border: solid 1px @vhi-light-grey;
+        height: 157px;
+        left: 0;
+        right: 0;
+        margin: 0 auto 35px;
+        width: 429px;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        .phone-number {
+            display: block;
+            .header-5;
+            margin-top: 64px;
+            @media (max-width: @screen-xs-min) {
+                margin-top: 31px;
+                margin-bottom: 31px;
+            }
+        }
+    }
+}
+
+#mood-callback-popup {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: @white;
+    z-index: 1000;
+    height: auto;
+    width: 500px;
+    @media (max-width: @screen-xs-min) {
+        height: auto;
+        top: 950px;
+        width: 100%;
+    }
+    .exit-popup {
+        background: rgba(0, 0, 0, 0) url("../images/icons/x-grey-small.png") no-repeat scroll 0 0;
+        background-image:
+                -webkit-image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        background-image:
+                image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        cursor: pointer;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right:14px;
+        height: 10px;
+        width: 10px;
+    }
+    .popup-title {
+        margin-bottom: 29px;
+        margin-top: 0;
+        .icon {
+            background: rgba(0, 0, 0, 0) url("../images/icons/phone.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/icons/phone@2x.png") 2x,
+                            url("../images/icons/phone@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/icons/phone@2x.png") 2x,
+                            url("../images/icons/phone@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 20px;
+            margin-left: 11px;
+            width: 20px;
+        }
+    }
+    .disclaimer-text {
+        right: 0;
+        left: 0;
+        margin: auto auto 35px;
+        width: 429px;
+        .content-10;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        p {
+            margin: 0;
+            @media (max-width: @screen-xs-min) {
+                margin: 12px;
+            }
+        }
+    }
+    #mood-callback-submit-btn {
+        margin-bottom: 35px !important;
+        margin-top: 30px;
+        height: 45px;
+        .button-orange;
+    }
+    #mood-callback-ok-btn {
+        margin-bottom: 35px !important;
+        margin-top: 30px;
+        height: 45px;
+        .button-orange;
+    }
+    .mood-callback-popup-success {
+        p {
+            .content-10;
+        }
+    }
+}
+
+#mood-webchat-popup {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: @white;
+    z-index: 1000;
+    top: 20px;
+    height: auto;
+    width: 500px;
+    @media (max-width: @screen-xs-min) {
+        height: 646px;
+        top: 950px;
+        width: 100%;
+    }
+    .exit-popup {
+        background: rgba(0, 0, 0, 0) url("../images/icons/x-grey-small.png") no-repeat scroll 0 0;
+        background-image:
+                -webkit-image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        background-image:
+                image-set(
+                        url("../images/icons/phone@2x.png") 2x,
+                        url("../images/icons/phone@3x.png") 3x,
+                );
+        cursor: pointer;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right:14px;
+        height: 10px;
+        width: 10px;
+    }
+    .popup-title {
+        margin-bottom: 29px;
+        margin-top: 18px;
+        .icon {
+            background: rgba(0, 0, 0, 0) url("../images/icons/chat.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/icons/chat@2x.png") 2x,
+                            url("../images/icons/chat@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/icons/chat@2x.png") 2x,
+                            url("../images/icons/chat@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 20px;
+            margin-left: 11px;
+            width: 20px;
+        }
+    }
+    .disclaimer-text {
+        right: 0;
+        left: 0;
+        margin: auto;
+        width: 429px;
+        .content-10;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        p {
+            margin: 0;
+            @media (max-width: @screen-xs-min) {
+                margin: 12px;
+            }
+        }
+    }
+    .webchat-details-container {
+        border: solid 1px @vhi-light-grey;
+        height: auto;
+        width: 429px;
+        left: 0;
+        right: 0;
+        margin: 45px auto 0;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        .label {
+            .content-9;
+        }
+        .webchat-details-inner-container {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 285px;
+            .callback-input {
+                width: 285px;
+                height: 44px;
+                background-color: @white;
+                border: solid 1px @light-grey;
+            }
+            .name-box {
+                display: inline-grid;
+                margin-top: 30px;
+            }
+            .phone-box {
+                display: inline-grid;
+                margin-top: 17px;
+            }
+            .date-box {
+                display: inline-grid;
+                margin-top: 11px;
+            }
+        }
+        .mood-webchat-error {
+            p {
+                color: @red;
+            }
+        }
+    }
+    #mood-webchat-submit-btn {
+        margin-bottom: 35px !important;
+        margin-top: 30px;
+        height: 45px;
+        .button-orange;
+    }
+    #mood-webchat-ok-btn {
+        margin-bottom: 35px !important;
+        margin-top: 30px;
+        height: 45px;
+        .button-orange;
+    }
+    .mood-webchat-popup-success {
+        p {
+            .content-10;
+        }
+    }
+}
+
+#mood-videochat-popup {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: @white;
+    z-index: 1000;
+    height: auto;
+    width: 500px;
+    @media (max-width: @screen-xs-min) {
+        height: 605px;
+        top: 950px;
+        width: 100%;
+    }
+    .exit-popup {
+        background: rgba(0, 0, 0, 0) url("../images/icons/x-grey-small.png") no-repeat scroll 0 0;
+        background-image:
+                -webkit-image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        background-image:
+                image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        cursor: pointer;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right:14px;
+        height: 10px;
+        width: 10px;
+    }
+    .popup-title {
+        margin-bottom: 29px;
+        margin-top: 0;
+        .icon {
+            background: rgba(0, 0, 0, 0) url("../images/icons/video-chat.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/icons/video-chat@2x.png") 2x,
+                            url("../images/icons/video-chat@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/icons/video-chat@2x.png") 2x,
+                            url("../images/icons/video-chat@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 13px;
+            margin-left: 11px;
+            width: 24px;
+        }
+    }
+    .disclaimer-text {
+        right: 0;
+        left: 0;
+        margin: auto;
+        width: 429px;
+        .content-10;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        p {
+            margin: 0;
+            @media (max-width: @screen-xs-min) {
+                margin-left: 12px;
+                margin-right: 12px;
+            }
+        }
+    }
+    .videochat-details-container {
+        border: solid 1px @vhi-light-grey;
+        height: auto;
+        width: 429px;
+        left: 0;
+        right: 0;
+        margin: 30px auto 0;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        .label {
+            .content-9;
+        }
+        .videochat-details-inner-container {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 285px;
+            .callback-input {
+                width: 285px;
+                height: 44px;
+                background-color: @white;
+                border: solid 1px @light-grey;
+            }
+            .name-box {
+                display: inline-grid;
+                margin-top: 30px;
+            }
+            .phone-box {
+                display: inline-grid;
+                margin-top: 17px;
+            }
+            .date-box {
+                display: inline-grid;
+                margin-top: 11px;
+            }
+        }
+        .mood-videochat-error {
+            p {
+                color: @red;
+            }
+        }
+    }
+    #mood-videochat-submit-btn {
+        margin-bottom: 35px !important;
+        margin-top: 30px;
+        height: 45px;
+        .button-orange;
+    }
+    #mood-videochat-ok-btn {
+        margin-bottom: 35px !important;
+        margin-top: 30px;
+        height: 45px;
+        .button-orange;
+    }
+    .mood-videochat-popup-success {
+        p {
+            .content-10;
+        }
+    }
+}
+
+#mood-appointment-popup {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: @white;
+    z-index: 1000;
+    height: auto;
+    width: 500px;
+    @media (max-width: @screen-xs-min) {
+        height: 605px;
+        top: 950px;
+        width: 100%;
+    }
+    .exit-popup {
+        background: rgba(0, 0, 0, 0) url("../images/icons/x-grey-small.png") no-repeat scroll 0 0;
+        background-image:
+                -webkit-image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        background-image:
+                image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        cursor: pointer;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right:14px;
+        height: 10px;
+        width: 10px;
+    }
+    .popup-title {
+        margin-bottom: 29px;
+        margin-top: 0;
+        .icon {
+            background: rgba(0, 0, 0, 0) url("../images/icons/video-chat.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/icons/video-chat@2x.png") 2x,
+                            url("../images/icons/video-chat@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/icons/video-chat@2x.png") 2x,
+                            url("../images/icons/video-chat@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 13px;
+            margin-left: 11px;
+            width: 24px;
+        }
+    }
+    .disclaimer-text {
+        right: 0;
+        left: 0;
+        margin: auto;
+        width: 429px;
+        .content-10;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        p {
+            margin: 0;
+            @media (max-width: @screen-xs-min) {
+                margin-left: 12px;
+                margin-right: 12px;
+            }
+        }
+    }
+    .appointment-details-container {
+        border: solid 1px @vhi-light-grey;
+        height: auto;
+        width: 429px;
+        left: 0;
+        right: 0;
+        margin: 30px auto 0;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        .label {
+            .content-9;
+        }
+        .appointment-details-inner-container {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 285px;
+            .callback-input {
+                width: 285px;
+                height: 44px;
+                background-color: @white;
+                border: solid 1px @light-grey;
+            }
+            .name-box {
+                display: inline-grid;
+                margin-top: 30px;
+            }
+            .phone-box {
+                display: inline-grid;
+                margin-top: 17px;
+            }
+            .date-box {
+                display: inline-grid;
+                margin-top: 11px;
+            }
+        }
+        .mood-appointment-error {
+            p {
+                color: @red;
+            }
+        }
+    }
+    #mood-appointment-submit-btn {
+        margin-bottom: 35px !important;
+        margin-top: 30px;
+        height: 45px;
+        .button-orange;
+    }
+    #mood-appointment-ok-btn {
+        margin-bottom: 35px !important;
+        margin-top: 30px;
+        height: 45px;
+        .button-orange;
+    }
+    .mood-appointment-popup-success {
+        p {
+            .content-10;
+        }
+    }
+}

@@ -1,0 +1,455 @@
+@import "../../../node_modules/bootstrap-less/bootstrap/variables";
+
+body {
+  background-color: @white-smoke !important;
+}
+
+h1 {
+  color: white;
+}
+
+#page-container {
+  padding-bottom: 25px;
+}
+
+@import "common";
+@import "nav-header";
+
+#understanding-irish-mental-health {
+  margin-top: 150px;
+  @media (max-width: @screen-sm-min) {
+    margin-top: 75px;
+  }
+  .title {
+    margin-top: 36px;
+    .header-4;
+    text-align: center;
+  }
+  .description {
+    margin-top: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+    .content-16;
+    @media (max-width: @screen-sm-min) {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.information-panel {
+  background: @white;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.25);
+  display: block;
+  margin-top: 50px;
+  .information-panel-inner {
+    display: flow-root;
+    margin: 50px;
+    @media (max-width: @screen-sm-min) {
+      margin: 10px 10px 50px;
+    }
+    .title {
+      .header-8;
+      margin-top: 20px;
+    }
+    .description {
+      .content-5;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .link {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      .content-6;
+      a {
+        color: @dark-gray;
+        text-decoration: underline;
+      }
+    }
+    .support-below {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      .content-6;
+    }
+    .support-description {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      .content-6;
+    }
+    span {
+      margin-left: 10px;
+      color: @pumpkin;
+      cursor: pointer;
+    }
+    .support-groups,
+    .workshops,
+    .youth-services {
+      display: block;
+      background: @white;
+      border-bottom: solid 1px @pale-grey;
+      .support-groups-inner,
+      .workshops-inner,
+      .youth-services-inner {
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+      .title {
+        margin-left: 10px;
+        .header-4;
+      }
+      .description {
+        .content-5;
+      }
+      .support-list {
+        .support-group {
+          .title {
+            margin-left: 0;
+            .content-5;
+            text-transform: uppercase;
+          }
+          .description {
+            .content-6;
+            a {
+              color: @dark-gray;
+              text-decoration: underline;
+            }
+          }
+          .website {
+            .content-17;
+          }
+          .phone-number {
+            .content-17;
+            a {
+              color: @light-purple;
+            }
+          }
+          .list-link {
+            cursor: pointer;
+            .content-5;
+          }
+        }
+      }
+    }
+    .gp {
+      display: block;
+      background: @white;
+      border-bottom: solid 1px @pale-grey;
+      border-top: solid 1px @pale-grey;
+      .gp-inner {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        .icon-and-title {
+          display: inline-flex;
+          .icon {
+            background: url("../images/understanding-irish-mental-health/icons/gp.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/understanding-irish-mental-health/icons/gp@2x.png") 2x,
+                            url("../images/understanding-irish-mental-health/icons/gp@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/understanding-irish-mental-health/icons/gp@2x.png") 2x,
+                            url("../images/understanding-irish-mental-health/icons/gp@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 67px;
+            width: 67px;
+          }
+        }
+        a {
+          margin-left: 5px;
+        }
+      }
+      .title {
+        margin-left: 10px;
+        .header-4;
+      }
+      .description {
+        .content-6;
+      }
+    }
+    .help-lines {
+      border-bottom: solid 1px @pale-grey;
+      display: block;
+      .help-lines-inner {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        .icon-and-title {
+          display: inline-flex;
+          .icon {
+            background: url("../images/understanding-irish-mental-health/icons/help-lines.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/understanding-irish-mental-health/icons/help-lines@2x.png") 2x,
+                            url("../images/understanding-irish-mental-health/icons/help-lines@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/understanding-irish-mental-health/icons/help-lines@2x.png") 2x,
+                            url("../images/understanding-irish-mental-health/icons/help-lines@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 67px;
+            width: 67px;
+          }
+        }
+      }
+      .title {
+        margin-left: 10px;
+        .header-4;
+      }
+      table {
+        table-layout: fixed;
+        margin: 50px 100px;
+        width: 100%;
+        overflow: hidden;
+        @media (max-width: @screen-sm-min) {
+          margin: 10px 5px;
+        }
+        tbody {
+          tr {
+            vertical-align: top;
+            width: 100%;
+          }
+          th {
+            width: 45%;
+            @media (max-width: @screen-sm-min) {
+              width: 100%;
+              display: inline-block;
+            }
+          }
+        }
+      }
+      .organisation-contact-info {
+        margin: 10px;
+      }
+      .type {
+        text-transform: uppercase;
+        .content-5;
+      }
+      .org {
+        .content-11;
+      }
+      .site, .phone, .email, .address, .desc {
+        .content-3;
+        a {
+          .content-3;
+        }
+        .link-space {
+          margin-left: 5px;
+        }
+      }
+    }
+    .support-groups {
+      .support-groups-inner {
+        .icon-and-title {
+          display: inline-flex;
+          .icon {
+            background: url("../images/understanding-irish-mental-health/icons/support-groups.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/understanding-irish-mental-health/icons/support-groups@2x.png") 2x,
+                            url("../images/understanding-irish-mental-health/icons/support-groups@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/understanding-irish-mental-health/icons/support-groups@2x.png") 2x,
+                            url("../images/understanding-irish-mental-health/icons/support-groups@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 67px;
+            width: 67px;
+          }
+        }
+        a {
+          margin-left: 5px;
+        }
+        .support-list {
+          .support-group {
+            .title {
+              color: @light-purple;
+            }
+          }
+        }
+      }
+    }
+    .workshops {
+      .workshops-inner {
+        .icon-and-title {
+          display: inline-flex;
+          .icon {
+            background: url("../images/understanding-irish-mental-health/icons/workshops.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/understanding-irish-mental-health/icons/workshops@2x.png") 2x,
+                            url("../images/understanding-irish-mental-health/icons/workshops@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/understanding-irish-mental-health/icons/workshops@2x.png") 2x,
+                            url("../images/understanding-irish-mental-health/icons/workshops@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 67px;
+            width: 67px;
+            @media (max-width: @screen-sm-min) {
+              width: 90px;
+            }
+          }
+          .title {
+            @media (max-width: @screen-sm-min) {
+              margin-top: 5px;
+            }
+          }
+        }
+        a {
+          margin-left: 5px;
+        }
+        .support-list {
+          .support-group {
+            .title {
+              color: @light-purple;
+            }
+          }
+        }
+      }
+    }
+    .youth-services {
+      .youth-services-inner {
+        .icon-and-title {
+          display: inline-flex;
+          .icon {
+            background: url("../images/understanding-irish-mental-health/icons/youth-services.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/understanding-irish-mental-health/icons/youth-services@2x.png") 2x,
+                            url("../images/understanding-irish-mental-health/icons/youth-services@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/understanding-irish-mental-health/icons/youth-services@2x.png") 2x,
+                            url("../images/understanding-irish-mental-health/icons/youth-services@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 67px;
+            width: 67px;
+            @media (max-width: @screen-sm-min) {
+              width: 90px;
+            }
+          }
+          .title {
+            @media (max-width: @screen-sm-min) {
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
+    .counselling-psychotherapy-services {
+      background: @white;
+      border-bottom: solid 1px @pale-grey;
+      .counselling-psychotherapy-services-inner {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        .icon-and-title {
+          display: inline-flex;
+          .icon {
+            background: url("../images/understanding-irish-mental-health/icons/counselling-psychotherapy.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/understanding-irish-mental-health/icons/counselling-psychotherapy@2x.png") 2x,
+                            url("../images/understanding-irish-mental-health/icons/counselling-psychotherapy@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/understanding-irish-mental-health/icons/counselling-psychotherapy@2x.png") 2x,
+                            url("../images/understanding-irish-mental-health/icons/counselling-psychotherapy@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 67px;
+            width: 67px;
+            @media (max-width: @screen-sm-min) {
+              width: 90px;
+            }
+          }
+          .title {
+            @media (max-width: @screen-sm-min) {
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+      .title {
+        margin-left: 10px;
+        .header-4;
+      }
+      .description {
+        .content-5;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .list-link {
+        cursor: pointer;
+        .content-5;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .support-list {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .support-group {
+          .title {
+            margin-top: 30px;
+            margin-left: 0;
+            .content-5;
+            text-transform: uppercase;
+            color: @light-purple;
+          }
+          .description {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            .content-6;
+            a {
+              color: @dark-gray;
+              text-decoration: underline;
+            }
+          }
+          .website {
+            .content-17;
+          }
+          .phone-number {
+            .content-17;
+            a {
+              color: @light-purple;
+            }
+          }
+        }
+      }
+      .disclaimer {
+        margin: 20px 50px;
+        p {
+          .content-5;
+          text-align: center;
+          margin: 0;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+.back-button {
+  text-align: center;
+  margin: auto;
+  left: 0;
+  right: 0;
+  #back-btn {
+    margin-bottom: 50px !important;
+    .button-orange;
+  }
+}
+
+@import "footer";
+

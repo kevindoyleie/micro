@@ -1,0 +1,182 @@
+@import "components/base-styles";
+
+#mobile-crisis-support {
+    bottom: 0;
+    width: 100%;
+    display: block;
+    position: absolute;
+    text-align: center;
+    @media (min-width: @screen-sm-min) {
+        display: none;
+    }
+    #mobile-crisis-support-btn {
+        .button-crisis;
+        .icon {
+            background: rgba(0, 0, 0, 0) url("../images/icons/crisis-small.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/icons/crisis-small@2x.png") 2x,
+                            url("../images/icons/crisis-small@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/icons/crisis-small@2x.png") 2x,
+                            url("../images/icons/crisis-small@3x.png") 3x,
+                    );
+            margin-left: 15px;
+            margin-top: 14px;
+            height: 32px;
+            width: 32px;
+        }
+        .text {
+            width: 170px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+}
+
+#crisis-support-popup {
+    background-color: @white;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 150px;
+    width: 864px;
+    z-index: 1000;
+    @media (max-width: @screen-sm-min) {
+        height: auto;
+        width: 90%;
+    }
+    @media (max-width: @screen-xs-min) {
+        top: 127px;
+    }
+    .popup-icon {
+        background: url("../images/icons/crisis-support.png") center;
+        background-image:
+                -webkit-image-set(
+                        url("../images/icons/crisis-support@2x.png") 2x,
+                        url("../images/icons/crisis-support@3x.png") 3x,
+                );
+        background-image:
+                image-set(
+                        url("../images/icons/crisis-support@2x.png") 2x,
+                        url("../images/icons/crisis-support@3x.png") 3x,
+                );
+        height: 67px;
+        width: 67px;
+        background-size: contain;
+        display: inline-block;
+        text-align: center;
+    }
+    .popup-title {
+        .content-8;
+        margin-top: 10px;
+    }
+    .popup-button {
+        border: 1px solid #9e9a9f;
+        height: 45px;
+        width: 200px;
+        padding: 9px !important;
+        .button-support-now;
+    }
+    .call-999 {
+        width: 760px;
+        background-color: #f5f5f5;
+        border: solid 1px #e5e5e5;
+        left: 0;
+        right: 0;
+        margin: 27px auto 0;
+        @media (max-width: @screen-sm-min) {
+            height: auto;
+            width: 90%;
+        }
+        .call-999-inner {
+            width: 663px;
+            left: 0;
+            right: 0;
+            margin: 36px auto 0;
+            .header-6;
+            @media (max-width: @screen-sm-min) {
+                margin: 22px auto 0;
+                height: auto;
+                width: 90%;
+            }
+            span {
+                color: @pumpkin;
+            }
+        }
+        #call-999-btn {
+            margin-bottom: 32px;
+            margin-top: 22px;
+            .icon {
+                background: rgba(0, 0, 0, 0) url("../images/icons/phone.png") no-repeat scroll 0 0;
+                background-image:
+                        -webkit-image-set(
+                                url("../images/icons/phone@2x.png") 2x,
+                                url("../images/icons/phone@3x.png") 3x,
+                        );
+                background-image:
+                        image-set(
+                                url("../images/icons/phone@2x.png") 2x,
+                                url("../images/icons/phone@3x.png") 3x,
+                        );
+                display: inline-flex;
+                height: 20px;
+                margin-left: 11px;
+                width: 20px;
+            }
+        }
+    }
+    .how-to-respond {
+        margin-top: 41px;
+        margin-left: 85px;
+        margin-right: 105px;
+        @media (max-width: @screen-sm-min) {
+            margin-top: 18px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .title {
+            .header-7;
+        }
+        .description {
+            margin-top: 12px;
+            .content-3;
+        }
+    }
+    #more-details {
+        margin-left: 85px;
+        margin-right: 78px;
+        @media (max-width: @screen-sm-min) {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .row-1 {
+            .header-7;
+            .listStyle {
+                color: @topaz;
+                margin-left: -23px;
+            }
+            .listStyle p {
+                color: @light-purple;
+                margin: 0;
+            }
+            .listStyle li {
+                color: @topaz;
+            }
+        }
+    }
+    #close-crisis-support-btn {
+        .button-orange;
+        margin-top: 25px;
+        margin-bottom: 49px;
+        align-self: center;
+        @media (max-width: @screen-sm-min) {
+            margin-top: 38px;
+        }
+    }
+}

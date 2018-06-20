@@ -1,0 +1,103 @@
+@import "components/base-styles";
+
+#courses-discounts {
+    margin-top: 47px;
+    .title {
+        .header-1;
+    }
+    .offer-outer-panel {
+        text-align: center;
+        @media (min-width: 970px) {
+            margin: 0 15px 0;
+        }
+    }
+    .panel-1 {
+        background-image: url("../images/courses/jake-young-168598-unsplash.jpg");
+    }
+    .panel-2 {
+        background-image: url("../images/courses/MumWithKids.jpg");
+    }
+    .panel-3 {
+        background-image: url("../images/courses/guilherme-stecanella-375176.jpg");
+    }
+    .panel-4 {
+        background-image: url("../images/courses/christiana-rivers-258740-unsplash.jpg");
+    }
+    .panel-5 {
+        background-image: url("../images/courses/blur-chairs-earphone-371163.jpeg");
+    }
+    .offer-panel {
+        display: inline-block;
+        height: 290px;
+        width: 194px;
+        margin-top: 53px;
+        @media (max-width: @screen-sm-min) {
+            margin-top: 23px;
+            margin-right: 0;
+            height: 160px;
+            width: 275px;
+        }
+        .offer-panel-container {
+            @media (max-width: @screen-sm-min) {
+                display: inline-flex !important;
+                width: 274px;
+            }
+        }
+        .offer-image {
+            height: 80px;
+            background-position: center;
+            background-size: cover;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.25);
+            @media (max-width: @screen-sm-min) {
+                height: 180px;
+                width: 80px;
+            }
+        }
+        .offer-inner-panel {
+            background-color: white;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.25);
+            display: inline-block;
+            height: 200px;
+            @media (max-width: @screen-sm-min) {
+                height: 180px;
+            }
+            .offer-container {
+                margin-left: 10px;
+                margin-right: 10px;
+                .offer-title {
+                    margin-top: 15px;
+                    text-align: left;
+                    a {
+                        .header-2;
+                    }
+                }
+                .description {
+                    margin-top: 10px;
+                    text-align: left;
+                }
+                .link {
+                    text-align: left;
+                    a {
+                        margin-bottom: 16px;
+                        bottom: 0;
+                        cursor: pointer;
+                        position: absolute;
+                        .link-1;
+                        @media (max-width: @screen-sm-min) {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: @screen-sm-min) {
+        .slick-dots li button:before {
+            font-size: 15px;
+            line-height: 15px;
+        }
+        .slick-slide {
+            height: 210px !important;
+        }
+    }
+}

@@ -1,0 +1,126 @@
+@import "components/base-styles";
+
+.callback-details-container {
+  border: solid 1px @vhi-light-grey;
+  height: auto;
+  width: 429px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  @media (max-width: @screen-xs-min) {
+    height: auto;
+    width: 100%;
+  }
+  .label {
+    .content-9;
+  }
+  .callback-details-inner-container {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 285px;
+    .callback-input {
+      width: 285px;
+      height: 44px;
+      background-color: @white;
+      border: solid 1px @light-grey;
+    }
+    .name-box {
+      display: inline-grid;
+      margin-top: 30px;
+    }
+    .phone-box {
+      display: inline-grid;
+      margin-top: 17px;
+    }
+    .date-box {
+      display: inline-grid;
+      margin-top: 11px;
+    }
+  }
+}
+
+.callback-error {
+  p {
+    color: @red;
+  }
+}
+
+.mood-callback-error {
+  p {
+    color: @red;
+  }
+}
+
+.voicemail-option {
+  display: block;
+  margin: 10px;
+  .checkbok-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    .content-9;
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      &:checked ~ .checkmark {
+        background-color: @pumpkin;
+        border-radius: 5px;
+      }
+      &:checked ~ .checkmark:after {
+        display: block;
+      }
+    }
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      border: solid 1px @vhi-light-grey;
+      border-radius: 5px;
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.preferred-time-box {
+  margin-top: 26px;
+  input[type="radio"] {
+    width: 22px;
+    height: 22px;
+    background-color: @vhi-light-grey;
+    border: solid 0.5px #b3b3b3;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .radio-label {
+    .content-5;
+    padding-left: 10px;
+    @media (max-width: @screen-sm-min) {
+      padding-left: 5px;
+    }
+  }
+  .radio-size {
+    width: 32%;
+  }
+}
