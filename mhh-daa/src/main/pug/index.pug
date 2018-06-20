@@ -1,0 +1,21 @@
+extends ./includes/layout
+
+block extraCss
+    link(rel="stylesheet" href="styles/index.min.css")
+
+block bodyContent
+    #page-container.container
+        include sections/nav
+        include sections/header-wrapper
+        #fade.fade_overlay
+        include sections/courses-discounts
+        include sections/tools-info-panel
+        include sections/check-your-mood
+        include sections/understanding
+        include sections/when-you-need-us
+        include sections/popups
+    include sections/footer
+    include sections/preload-images
+    include sections/ouibounce
+block extraJs
+    script(src="scripts/index.js")

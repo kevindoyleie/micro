@@ -1,0 +1,186 @@
+.popup-fade-overlay
+#get-support-now
+    .exit-popup.close-get-support-now-btn
+    .popup-icon
+    .popup-title GET SUPPORT NOW
+    .button-container
+        .row-1
+            #call-now-btn.popup-button Call Now
+                .icon
+            .popup-button-space
+            #callback-btn.popup-button Request A Callback
+                .icon
+        .row-2
+            #web-chat-btn.popup-button Web Chat
+                .icon
+            .popup-button-space
+            #video-chat-btn.popup-button Video Chat
+                .icon
+        .row-3
+            #book-appointment-btn.popup-button Book An Appointment
+                .icon
+    .regulation-text Vhi Healthcare DAC trading as Vhi Healthcare is regulated by the Central Bank of Ireland.
+#call-now-popup(style="display: none;")
+    #close-call-now-popup-btn.exit-popup
+    .popup-title Call Now
+        .icon
+    .disclaimer-text
+        p Our confidential counselling service line is open between 8am and 9pm seven days a week.
+    .call-now-number
+        a.phone-number(href="tel:1800995956") 1800 995 956
+#callback-popup(style="display: none;")
+    #close-callback-popup-btn.exit-popup
+    .popup-title Request A Callback
+        .icon
+    .callback-popup-content
+        .disclaimer-text
+            p Please complete the form and we will arrange a callback from our confidential counselling service.
+        .callback-details-container
+            .callback-details-inner-container
+                .name-box
+                    .label Name
+                    input#callback-name.callback-input
+                .phone-box
+                    .label Phone
+                    input#callback-phonenumber(type="tel").callback-input
+                .date-box
+                    .label Preferred Callback Date
+                    input#callback-date(type="date").callback-input
+            .preferred-time-box
+                .label Please select a preferred time for callback
+                .radio.radio-info.radio-size
+                    input#callback-morning(type="radio" name="callback-time" value="8am - 12pm")
+                    label(for="callback-morning").radio-label 8am - 12pm
+                .radio.radio-info.radio-size
+                    input#callback-afternoon(type="radio" name="callback-time" value="12pm - 5pm")
+                    label(for="callback-afternoon").radio-label 12pm - 5pm
+                .radio.radio-info.radio-size
+                    input#callback-evening(type="radio" name="callback-time" value="5pm - 9pm")
+                    label(for="callback-evening").radio-label 5pm - 9pm
+            .voicemail-option
+                label.checkbok-container If we are unable to reach you at your preferred time our counsellor will leave you a voicemail. If you do not wish to receive a voicemail please check this box.
+                    input#callback-voicemail-ok(type="checkbox" name="callback-voicemail-ok")
+                    span.checkmark
+            .callback-error(style="display: none;")
+                p Please complete all the fields and submit.
+        button#callback-submit-btn Submit
+    .callback-popup-success(style="display: none;")
+        p Thank you.  A member of our counselling service will be in contact soon.
+        button#callback-ok-btn OK
+#webchat-popup(style="display: none;")
+    #close-webchat-popup-btn.exit-popup
+    .popup-title Web Chat
+        .icon
+    .webchat-popup-content
+        .disclaimer-text
+            p We are currently still building this service.  In the meantime, please complete the form and we will arrange a callback from our confidential counselling service.
+        .webchat-details-container
+            .webchat-details-inner-container
+                .name-box
+                    .label Name
+                    input#webchat-name.callback-input
+                .phone-box
+                    .label Phone
+                    input#webchat-phonenumber(type="tel").callback-input
+                .date-box
+                    .label Preferred Callback Date
+                    input#webchat-date(type="date").callback-input
+            .preferred-time-box
+                .label Please select a preferred time for callback
+                .radio.radio-info.radio-size
+                    input#webchat-morning(type="radio" name="webchat-time" value="8am - 12pm")
+                    label(for="webchat-morning").radio-label 8am - 12pm
+                .radio.radio-info.radio-size
+                    input#webchat-afternoon(type="radio" name="webchat-time" value="12pm - 5pm")
+                    label(for="callback-afternoon").radio-label 12pm - 5pm
+                .radio.radio-info.radio-size
+                    input#webchat-evening(type="radio" name="webchat-time" value="5pm - 9pm")
+                    label(for="webchat-evening").radio-label 5pm - 9pm
+            .voicemail-option
+                label.checkbok-container If we are unable to reach you at your preferred time our counsellor will leave you a voicemail. If you do not wish to receive a voicemail please check this box.
+                    input#webchat-voicemail-ok(type="checkbox" name="webchat-voicemail-ok")
+                    span.checkmark
+            .webchat-error(style="display: none;")
+                p Please complete all the fields and submit.
+        button#webchat-submit-btn Submit
+    .webchat-popup-success(style="display: none;")
+        p Thank you.  A member of our counselling service will be in contact soon.
+        button#webchat-ok-btn OK
+#videochat-popup(style="display: none;")
+    #close-videochat-popup-btn.exit-popup
+    .popup-title Video Chat
+        .icon
+    .videochat-popup-content
+        .disclaimer-text
+            p We are currently still building this service.  In the meantime, please complete the form and we will arrange a callback from our confidential counselling service.
+        .videochat-details-container
+            .videochat-details-inner-container
+                .name-box
+                    .label Name
+                    input#videochat-name.callback-input
+                .phone-box
+                    .label Phone
+                    input#videochat-phonenumber(type="tel").callback-input
+                .date-box
+                    .label Preferred Callback Date
+                    input#videochat-date(type="date").callback-input
+            .preferred-time-box
+                .label Please select a preferred time for callback
+                .radio.radio-info.radio-size
+                    input#videochat-morning(type="radio" name="vid-callback-time" value="8am - 12pm")
+                    label(for="videochat-morning").radio-label 8am – 12pm
+                .radio.radio-info.radio-size
+                    input#videochat-afternoon(type="radio" name="vid-callback-time" value="12pm - 5pm")
+                    label(for="videochat-afternoon").radio-label 12pm – 5pm
+                .radio.radio-info.radio-size
+                    input#videochat-evening(type="radio" name="vid-callback-time" value="5pm - 9pm")
+                    label(for="videochat-evening").radio-label 5pm – 9pm
+            .voicemail-option
+                label.checkbok-container If we are unable to reach you at your preferred time our counsellor will leave you a voicemail. If you do not wish to receive a voicemail please check this box.
+                    input#videochat-voicemail-ok(type="checkbox" name="videochat-voicemail-ok")
+                    span.checkmark
+            .videochat-error(style="display: none;")
+                p Please complete all the fields and submit.
+        button#videochat-submit-btn Submit
+    .videochat-popup-success(style="display: none;")
+        p Thank you.  A member of our counselling service will be in contact soon.
+        button#videochat-ok-btn OK
+#appointment-popup(style="display: none;")
+    #close-appointment-popup-btn.exit-popup
+    .popup-title Book An Appointment
+        .icon
+    .appointment-popup-content
+        .disclaimer-text
+            p We are currently still building this service. In the meantime, please complete the form and we will arrange a callback from our confidential counselling service.
+        .appointment-details-container
+            .appointment-details-inner-container
+                .name-box
+                    .label Name
+                    input#appointment-name.callback-input
+                .phone-box
+                    .label Phone
+                    input#appointment-phonenumber(type="tel").callback-input
+                .date-box
+                    .label Preferred Callback Date
+                    input#appointment-date(type="date").callback-input
+            .preferred-time-box
+                .label Please select a preferred time for callback
+                .radio.radio-info.radio-size
+                    input#appointment-morning(type="radio" name="appointment-time" value="8am - 12pm")
+                    label(for="appointment-morning").radio-label 8am - 12pm
+                .radio.radio-info.radio-size
+                    input#appointment-afternoon(type="radio" name="appointment-time" value="12pm - 5pm")
+                    label(for="appointment-afternoon").radio-label 12pm - 5pm
+                .radio.radio-info.radio-size
+                    input#appointment-evening(type="radio" name="appointment-time" value="5pm - 9pm")
+                    label(for="appointment-evening").radio-label 5pm - 9pm
+            .voicemail-option
+                label.checkbok-container If we are unable to reach you at your preferred time our counsellor will leave you a voicemail. If you do not wish to receive a voicemail please check this box.
+                    input#appointment-voicemail-ok(type="checkbox" name="appointment-voicemail-ok")
+                    span.checkmark
+            .appointment-error(style="display: none;")
+                p Please complete all the fields and submit.
+        button#appointment-submit-btn Submit
+    .appointment-popup-success(style="display: none;")
+        p Thank you.  A member of our counselling service will be in contact soon.
+        button#appointment-ok-btn OK

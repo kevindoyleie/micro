@@ -1,0 +1,200 @@
+.popup-fade-overlay
+#check-mood
+    .exit-popup.close-check-mood-btn
+    .popup-icon
+    .popup-title CHECK MY MOOD
+    .popup-description We can all feel low, anxious or panicky from time to time. Check your mood using this simple questionnaire and get advice on what might help.
+    .mood-test-container
+        #mood-test-panel-1
+            .mood-test-description
+                p When it comes to emotions, it can sometimes be hard to recognise or admit that we're not feeling 100%.
+                p Take this short questionnaire to:
+                ul
+                    li Help you better understand how you've been feeling over the last fortnight
+                    li Point you in the right direction for helpful advice and information
+                p If you are struggling, it is not intended to replace a consultation with a GP.
+            button#start-mood-test-btn Start
+            .test-time Test Time: 5 Mins
+            .disclaimer-text The questions used in this self-assessment questionnaire are a combination of the Personal Health Questionnaire (PHQ-9) and the Generalised Anxiety Disorder (GAD-7) . These are measures used by GPs and counsellors to assess and monitor depression and anxiety severity.
+        #mood-test-panel-2(style="display: none;")
+            .iframe-container
+                #assessment_webpart_wrapper
+                    iframe#nhs-iframe(title="self assessments" src="https://media.nhschoices.nhs.uk/tools/documents/self_assessments_js/assessment.html?ASid=44&syndicate=true" frameborder="no" scrolling="no")
+                    #assessment_webpart_branding(style="float:right;")
+                        a(href="https://nhs.uk/tools/")
+                            img(src="https://media.nhschoices.nhs.uk/tools/documents/self_assessments_js/images/syndication.png" width="264" height="38" border="0" alt="content provided by NHS Choices")
+            .button-container
+                #mood-call-now-btn.popup-button Call Now
+                    .icon
+                #mood-callback-btn.popup-button Request A Callback
+                    .icon
+                #mood-web-chat-btn.popup-button Web Chat
+                    .icon
+                #mood-video-chat-btn.popup-button Video Chat
+                    .icon
+                #mood-book-appointment-btn.popup-button Book An Appointment
+                    .icon
+#mood-call-now-popup(style="display: none;")
+    #close-mood-call-now-popup-btn.exit-popup
+    .popup-title Call Now
+        .icon
+    .disclaimer-text
+        p Our confidential counselling service line is open between 8am and 9pm seven days a week.
+    .call-now-number
+        a.phone-number(href="tel:1800995956") 1800 995 956
+#mood-callback-popup(style="display: none;")
+    #close-mood-callback-popup-btn.exit-popup
+    .popup-title Request A Callback
+        .icon
+    .mood-callback-popup-content
+        .disclaimer-text
+            p Please complete the form and we will arrange a callback from our confidential counselling service.
+        .callback-details-container
+            .callback-details-inner-container
+                .name-box
+                    .label Name
+                    input#mood-callback-name.callback-input
+                .phone-box
+                    .label Phone
+                    input#mood-callback-phonenumber(type="tel").callback-input
+                .date-box
+                    .label Preferred Callback Date
+                    input#mood-callback-date(type="date").callback-input
+            .preferred-time-box
+                .label Please select a preferred time for callback
+                .radio.radio-info.radio-size
+                    input#mood-callback-morning(type="radio" name="callback-time" value="8am - 12pm")
+                    label(for="mood-callback-morning").radio-label 8am - 12pm
+                .radio.radio-info.radio-size
+                    input#mood-callback-afternoon(type="radio" name="callback-time" value="12pm - 5pm")
+                    label(for="mood-callback-afternoon").radio-label 12pm - 5pm
+                .radio.radio-info.radio-size
+                    input#mood-callback-evening(type="radio" name="callback-time" value="5pm - 9pm")
+                    label(for="mood-callback-evening").radio-label 5pm - 9pm
+            .voicemail-option
+                label.checkbok-container If we are unable to reach you at your preferred time our counsellor will leave you a voicemail. If you do not wish to receive a voicemail please check this box.
+                    input#mood-callback-voicemail-ok(type="checkbox" name="mood-callback-voicemail-ok")
+                    span.checkmark
+            .mood-callback-error(style="display: none;")
+                p Please complete all the fields and submit.
+        button#mood-callback-submit-btn Submit
+    .mood-callback-popup-success(style="display: none;")
+        p Thank you.  A member of our counselling service will be in contact soon.
+        button#mood-callback-ok-btn OK
+#mood-webchat-popup(style="display: none;")
+    #close-mood-webchat-popup-btn.exit-popup
+    .popup-title Web Chat
+        .icon
+    .mood-webchat-popup-content
+        .disclaimer-text
+            p We are currently still building this service.  In the meantime, please complete the form and we will arrange a callback from our confidential counselling service.
+        .webchat-details-container
+            .webchat-details-inner-container
+                .name-box
+                    .label Name
+                    input#mood-webchat-name.callback-input
+                .phone-box
+                    .label Phone
+                    input#mood-webchat-phonenumber(type="tel").callback-input
+                .date-box
+                    .label Preferred Callback Date
+                    input#mood-webchat-date(type="date").callback-input
+            .preferred-time-box
+                .label Please select a preferred time for callback
+                .radio.radio-info.radio-size
+                    input#mood-webchat-morning(type="radio" name="webchat-time" value="8am - 12pm")
+                    label(for="mood-webchat-morning").radio-label 8am - 12pm
+                .radio.radio-info.radio-size
+                    input#mood-webchat-afternoon(type="radio" name="webchat-time" value="12pm - 5pm")
+                    label(for="mood-webchat-afternoon").radio-label 12pm - 5pm
+                .radio.radio-info.radio-size
+                    input#mood-webchat-evening(type="radio" name="webchat-time" value="5pm - 9pm")
+                    label(for="mood-webchat-evening").radio-label 5pm - 9pm
+            .voicemail-option
+                label.checkbok-container If we are unable to reach you at your preferred time our counsellor will leave you a voicemail. If you do not wish to receive a voicemail please check this box.
+                    input#mood-webchat-voicemail-ok(type="checkbox" name="mood-webchat-voicemail-ok")
+                    span.checkmark
+            .mood-webchat-error(style="display: none;")
+                p Please complete all the fields and submit.
+        button#mood-webchat-submit-btn Submit
+    .mood-webchat-popup-success(style="display: none;")
+        p Thank you.  A member of our counselling service will be in contact soon.
+        button#mood-webchat-ok-btn OK
+#mood-videochat-popup(style="display: none;")
+    #close-mood-videochat-popup-btn.exit-popup
+    .popup-title Video Chat
+        .icon
+    .mood-videochat-popup-content
+        .disclaimer-text
+            p We are currently still building this service.  In the meantime, please complete the form and we will arrange a callback from our confidential counselling service.
+        .videochat-details-container
+            .videochat-details-inner-container
+                .name-box
+                    .label Name
+                    input#mood-videochat-name.callback-input
+                .phone-box
+                    .label Phone
+                    input#mood-videochat-phonenumber(type="tel").callback-input
+                .date-box
+                    .label Preferred Callback Date
+                    input#mood-videochat-date(type="date").callback-input
+            .preferred-time-box
+                .label Please select a preferred time for callback
+                .radio.radio-info.radio-size
+                    input#mood-videochat-morning(type="radio" name="vid-callback-time" value="8am - 12pm")
+                    label(for="mood-videochat-morning").radio-label 8am - 12pm
+                .radio.radio-info.radio-size
+                    input#mood-videochat-afternoon(type="radio" name="vid-callback-time" value="12pm - 5pm")
+                    label(for="mood-videochat-afternoon").radio-label 12pm - 5pm
+                .radio.radio-info.radio-size
+                    input#mood-videochat-evening(type="radio" name="vid-callback-time" value="5pm - 9pm")
+                    label(for="mood-videochat-evening").radio-label 5pm - 9pm
+            .voicemail-option
+                label.checkbok-container If we are unable to reach you at your preferred time our counsellor will leave you a voicemail. If you do not wish to receive a voicemail please check this box.
+                    input#mood-videochat-voicemail-ok(type="checkbox" name="mood-videochat-voicemail-ok")
+                    span.checkmark
+            .mood-videochat-error(style="display: none;")
+                p Please complete all the fields and submit.
+        button#mood-videochat-submit-btn Submit
+    .mood-videochat-popup-success(style="display: none;")
+        p Thank you.  A member of our counselling service will be in contact soon.
+        button#mood-videochat-ok-btn OK
+#mood-appointment-popup(style="display: none;")
+    #close-mood-appointment-popup-btn.exit-popup
+    .popup-title Book An Appointment
+        .icon
+    .mood-appointment-popup-content
+        .disclaimer-text
+            p We are currently still building this service. In the meantime, please complete the form and we will arrange a callback from our confidential counselling service.
+        .appointment-details-container
+            .appointment-details-inner-container
+                .name-box
+                    .label Name
+                    input#mood-appointment-name.callback-input
+                .phone-box
+                    .label Phone
+                    input#mood-appointment-phonenumber(type="tel").callback-input
+                .date-box
+                    .label Preferred Callback Date
+                    input#mood-appointment-date(type="date").callback-input
+            .preferred-time-box
+                .label Please select a preferred time for callback
+                .radio.radio-info.radio-size
+                    input#mood-appointment-morning(type="radio" name="appointment-time" value="8am - 12pm")
+                    label(for="mood-appointment-morning").radio-label 8am - 12pm
+                .radio.radio-info.radio-size
+                    input#mood-appointment-afternoon(type="radio" name="appointment-time" value="12pm - 5pm")
+                    label(for="mood-appointment-afternoon").radio-label 12pm - 5pm
+                .radio.radio-info.radio-size
+                    input#mood-appointment-evening(type="radio" name="appointment-time" value="5pm - 9pm")
+                    label(for="mood-appointment-evening").radio-label 5pm - 9pm
+            .voicemail-option
+                label.checkbok-container If we are unable to reach you at your preferred time our counsellor will leave you a voicemail. If you do not wish to receive a voicemail please check this box.
+                    input#mood-appointment-voicemail-ok(type="checkbox" name="mood-appointment-voicemail-ok")
+                    span.checkmark
+            .mood-appointment-error(style="display: none;")
+                p Please complete all the fields and submit.
+        button#mood-appointment-submit-btn Submit
+    .mood-appointment-popup-success(style="display: none;")
+        p Thank you.  A member of our counselling service will be in contact soon.
+        button#mood-appointment-ok-btn OK
