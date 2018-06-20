@@ -1,0 +1,812 @@
+@import "components/base-styles";
+
+
+.exit-popup {
+    background: rgba(0, 0, 0, 0) url("../images/icons/x-orange.png") no-repeat scroll 0 0;
+    background-image:
+            -webkit-image-set(
+                    url("../images/icons/x-orange@2x.png") 2x,
+                    url("../images/icons/x-orange@3x.png") 3x,
+            );
+    background-image:
+            image-set(
+                    url("../images/icons/x-orange@2x.png") 2x,
+                    url("../images/icons/x-orange@3x.png") 3x,
+            );
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right:15px;
+    height: 15px;
+    width: 15px;
+}
+
+#get-support-now-popup {
+    background-color: @white;
+    height: 604px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 203px;
+    width: 864px;
+    z-index: 1000;
+    @media (max-width: @screen-sm-min) {
+        top: 125px;
+        height: 570px;
+        width: 90%;
+    }
+    @media (max-width: @screen-xs-min) {
+        top: 127px;
+    }
+    .popup-icon {
+        background: url("../images/icons/get-support-icon.png") center;
+        background-image:
+                -webkit-image-set(
+                        url("../images/icons/get-support-icon@2x.png") 2x,
+                        url("../images/icons/get-support-icon@3x.png") 3x,
+                );
+        background-image:
+                image-set(
+                        url("../images/icons/get-support-icon@2x.png") 2x,
+                        url("../images/icons/get-support-icon@3x.png") 3x,
+                );
+        height: 67px;
+        width: 67px;
+        background-size: contain;
+        display: inline-block;
+        text-align: center;
+    }
+    .popup-title {
+        .content-8;
+        margin-bottom: 39px;
+        margin-top: 10px;
+        @media (max-width: @screen-sm-min) {
+            margin-bottom: 23px;
+        }
+    }
+    .button-container {
+        border: solid 1px @vhi-light-grey;
+        height: 310px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 760px;
+        @media (max-width: @screen-sm-min) {
+            height: auto;
+            width: 90%;
+        }
+    }
+    .popup-button {
+        border: 1px solid #9e9a9f;
+        height: 45px;
+        width: 200px;
+        padding: 9px !important;
+        .button-support-now;
+    }
+    .popup-button-space {
+        width: 35px;
+    }
+    .row-1 {
+        display: inline-flex;
+        margin-top: 45px;
+        @media (max-width: @screen-sm-min) {
+            display: inline-block;
+            margin-top: 23px;
+        }
+        #call-now-btn {
+            .icon {
+                background: rgba(0, 0, 0, 0) url("../images/icons/phone.png") no-repeat scroll 0 0;
+                background-image:
+                        -webkit-image-set(
+                                url("../images/icons/phone@2x.png") 2x,
+                                url("../images/icons/phone@3x.png") 3x,
+                        );
+                background-image:
+                        image-set(
+                                url("../images/icons/phone@2x.png") 2x,
+                                url("../images/icons/phone@3x.png") 3x,
+                        );
+                display: inline-flex;
+                height: 20px;
+                margin-left: 11px;
+                width: 20px;
+            }
+        }
+        #callback-btn {
+            @media (max-width: @screen-sm-min) {
+                margin-top: 15px;
+            }
+            .icon {
+                background: rgba(0, 0, 0, 0) url("../images/icons/phone.png") no-repeat scroll 0 0;
+                background-image:
+                        -webkit-image-set(
+                                url("../images/icons/phone@2x.png") 2x,
+                                url("../images/icons/phone@3x.png") 3x,
+                        );
+                background-image:
+                        image-set(
+                                url("../images/icons/phone@2x.png") 2x,
+                                url("../images/icons/phone@3x.png") 3x,
+                        );
+                display: inline-flex;
+                height: 20px;
+                margin-left: 11px;
+                width: 20px;
+            }
+        }
+    }
+    .row-2 {
+        display: inline-flex;
+        margin-top: 42px;
+        @media (max-width: @screen-sm-min) {
+            display: inline-block;
+            margin-top: 15px;
+        }
+        #web-chat-btn {
+            .icon {
+                background: rgba(0, 0, 0, 0) url("../images/icons/chat.png") no-repeat scroll 0 0;
+                background-image:
+                        -webkit-image-set(
+                                url("../images/icons/chat@2x.png") 2x,
+                                url("../images/icons/chat@3x.png") 3x,
+                        );
+                background-image:
+                        image-set(
+                                url("../images/icons/chat@2x.png") 2x,
+                                url("../images/icons/chat@3x.png") 3x,
+                        );
+                display: inline-flex;
+                height: 20px;
+                margin-left: 11px;
+                width: 20px;
+            }
+        }
+        #video-chat-btn {
+            @media (max-width: @screen-sm-min) {
+                margin-top: 15px;
+            }
+            .icon {
+                background: rgba(0, 0, 0, 0) url("../images/icons/video-chat.png") no-repeat scroll 0 0;
+                background-image:
+                        -webkit-image-set(
+                                url("../images/icons/video-chat@2x.png") 2x,
+                                url("../images/icons/video-chat@3x.png") 3x,
+                        );
+                background-image:
+                        image-set(
+                                url("../images/icons/video-chat@2x.png") 2x,
+                                url("../images/icons/video-chat@3x.png") 3x,
+                        );
+                display: inline-flex;
+                height: 13px;
+                margin-left: 11px;
+                width: 24px;
+            }
+        }
+    }
+    .row-3 {
+        margin-top: 43px;
+        @media (max-width: @screen-sm-min) {
+            margin-top: 15px;
+        }
+        .popup-button {
+            width: 243px;
+            @media (max-width: @screen-sm-min) {
+                margin-bottom: 23px;
+            }
+        }
+        .icon {
+            background: rgba(0, 0, 0, 0) url("../images/icons/cal-icon.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/icons/cal-icon@2x.png") 2x,
+                            url("../images/icons/cal-icon@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/icons/cal-icon@2x.png") 2x,
+                            url("../images/icons/cal-icon@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 21px;
+            margin-left: 11px;
+            width: 19px;
+        }
+    }
+    .regulation-text {
+        .content-7;
+        margin-top: 51px;
+        @media (max-width: @screen-sm-min) {
+            margin: 31px 38px 33px;
+        }
+    }
+}
+
+#call-now-popup {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: @white;
+    z-index: 1000;
+    top: 135px;
+    height: auto;
+    width: 500px;
+    @media (max-width: @screen-xs-min) {
+        height: auto;
+        top: 0;
+        width: 100%;
+    }
+    .exit-popup {
+        background: rgba(0, 0, 0, 0) url("../images/icons/x-grey-small.png") no-repeat scroll 0 0;
+        background-image:
+                -webkit-image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        background-image:
+                image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right:14px;
+        height: 10px;
+        width: 10px;
+    }
+    .popup-title {
+        margin-bottom: 29px;
+        margin-top: 0;
+        .icon {
+            background: rgba(0, 0, 0, 0) url("../images/icons/phone.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/icons/phone@2x.png") 2x,
+                            url("../images/icons/phone@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/icons/phone@2x.png") 2x,
+                            url("../images/icons/phone@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 20px;
+            margin-left: 11px;
+            width: 20px;
+        }
+    }
+    .disclaimer-text {
+        right: 0;
+        left: 0;
+        margin: auto auto 35px;
+        width: 429px;
+        .content-10;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        p {
+            margin: 0;
+            @media (max-width: @screen-xs-min) {
+                margin: 12px;
+            }
+        }
+    }
+    .call-now-number {
+        border: solid 1px @vhi-light-grey;
+        height: 157px;
+        left: 0;
+        right: 0;
+        margin: 0 auto 35px;
+        width: 429px;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        .phone-number {
+            display: block;
+            .header-5;
+            margin-top: 64px;
+            @media (max-width: @screen-xs-min) {
+                margin-top: 31px;
+                margin-bottom: 31px;
+            }
+        }
+    }
+}
+
+#callback-popup {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: @white;
+    z-index: 1000;
+    top: -5px;
+    height: auto;
+    width: 500px;
+    @media (max-width: @screen-xs-min) {
+        height: auto;
+        top: 0;
+        width: 100%;
+    }
+    .exit-popup {
+        background: rgba(0, 0, 0, 0) url("../images/icons/x-grey-small.png") no-repeat scroll 0 0;
+        background-image:
+                -webkit-image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        background-image:
+                image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right:14px;
+        height: 10px;
+        width: 10px;
+    }
+    .popup-title {
+        margin-bottom: 29px;
+        margin-top: 0;
+        .icon {
+            background: rgba(0, 0, 0, 0) url("../images/icons/phone.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/icons/phone@2x.png") 2x,
+                            url("../images/icons/phone@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/icons/phone@2x.png") 2x,
+                            url("../images/icons/phone@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 20px;
+            margin-left: 11px;
+            width: 20px;
+        }
+    }
+    .disclaimer-text {
+        right: 0;
+        left: 0;
+        margin: auto auto 35px;
+        width: 429px;
+        .content-10;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        p {
+            margin: 0;
+            @media (max-width: @screen-xs-min) {
+                margin: 12px;
+            }
+        }
+    }
+    #callback-submit-btn {
+        margin-bottom: 35px !important;
+        margin-top: 30px;
+        height: 45px;
+        .button-orange;
+    }
+    #callback-ok-btn {
+        margin-bottom: 35px !important;
+        margin-top: 30px;
+        height: 45px;
+        .button-orange;
+    }
+    .callback-popup-success {
+        p {
+            .content-10;
+        }
+    }
+}
+
+#webchat-popup {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: @white;
+    z-index: 1000;
+    top: -15px;
+    height: auto;
+    width: 500px;
+    @media (max-width: @screen-xs-min) {
+        height: auto;
+        top: 0;
+        width: 100%;
+    }
+    .exit-popup {
+        background: rgba(0, 0, 0, 0) url("../images/icons/x-grey-small.png") no-repeat scroll 0 0;
+        background-image:
+                -webkit-image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        background-image:
+                image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right:14px;
+        height: 10px;
+        width: 10px;
+    }
+    .popup-title {
+        margin-bottom: 29px;
+        margin-top: 18px;
+        .icon {
+            background: rgba(0, 0, 0, 0) url("../images/icons/chat.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/icons/chat@2x.png") 2x,
+                            url("../images/icons/chat@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/icons/chat@2x.png") 2x,
+                            url("../images/icons/chat@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 20px;
+            margin-left: 11px;
+            width: 20px;
+        }
+    }
+    .disclaimer-text {
+        right: 0;
+        left: 0;
+        margin: auto auto 35px;
+        width: 429px;
+        .content-10;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        p {
+            margin: 0;
+            @media (max-width: @screen-xs-min) {
+                margin: 12px;
+            }
+        }
+    }
+    .webchat-details-container {
+        border: solid 1px @vhi-light-grey;
+        height: auto;
+        width: 429px;
+        left: 0;
+        right: 0;
+        margin: 45px auto 0;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        .label {
+            .content-9;
+        }
+        .webchat-details-inner-container {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 285px;
+            .callback-input {
+                width: 285px;
+                height: 44px;
+                background-color: @white;
+                border: solid 1px @light-grey;
+            }
+            .name-box {
+                display: inline-grid;
+                margin-top: 30px;
+            }
+            .phone-box {
+                display: inline-grid;
+                margin-top: 17px;
+            }
+            .date-box {
+                display: inline-grid;
+                margin-top: 11px;
+            }
+        }
+        .webchat-error {
+            p {
+                color: @red;
+            }
+        }
+    }
+    #webchat-submit-btn {
+        margin-bottom: 35px !important;
+        margin-top: 30px;
+        height: 45px;
+        .button-orange;
+    }
+    #webchat-ok-btn {
+        margin-bottom: 35px !important;
+        margin-top: 30px;
+        height: 45px;
+        .button-orange;
+    }
+    .webchat-popup-success {
+        p {
+            .content-10;
+        }
+    }
+}
+
+#videochat-popup {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: @white;
+    z-index: 1000;
+    top: -15px;
+    height: auto;
+    width: 500px;
+    @media (max-width: @screen-xs-min) {
+        height: auto;
+        top: 0;
+        width: 100%;
+    }
+    .exit-popup {
+        background: rgba(0, 0, 0, 0) url("../images/icons/x-grey-small.png") no-repeat scroll 0 0;
+        background-image:
+                -webkit-image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        background-image:
+                image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right:14px;
+        height: 10px;
+        width: 10px;
+    }
+    .popup-title {
+        margin-bottom: 29px;
+        margin-top: 0;
+        .icon {
+            background: rgba(0, 0, 0, 0) url("../images/icons/video-chat.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/icons/video-chat@2x.png") 2x,
+                            url("../images/icons/video-chat@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/icons/video-chat@2x.png") 2x,
+                            url("../images/icons/video-chat@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 13px;
+            margin-left: 11px;
+            width: 24px;
+        }
+    }
+    .disclaimer-text {
+        right: 0;
+        left: 0;
+        margin: auto auto 35px;
+        width: 429px;
+        .content-10;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        p {
+            margin: 0;
+            @media (max-width: @screen-xs-min) {
+                margin-left: 12px;
+                margin-right: 12px;
+            }
+        }
+    }
+    .videochat-details-container {
+        border: solid 1px @vhi-light-grey;
+        height: auto;
+        width: 429px;
+        left: 0;
+        right: 0;
+        margin: 30px auto 0;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        .label {
+            .content-9;
+        }
+        .videochat-details-inner-container {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 285px;
+            .callback-input {
+                width: 285px;
+                height: 44px;
+                background-color: @white;
+                border: solid 1px @light-grey;
+            }
+            .name-box {
+                display: inline-grid;
+                margin-top: 30px;
+            }
+            .phone-box {
+                display: inline-grid;
+                margin-top: 17px;
+            }
+            .date-box {
+                display: inline-grid;
+                margin-top: 11px;
+            }
+        }
+        .videochat-error {
+            p {
+                color: @red;
+            }
+        }
+    }
+    #videochat-submit-btn {
+        margin-top: 30px;
+        margin-bottom: 35px !important;
+        height: 45px;
+        .button-orange;
+    }
+    #videochat-ok-btn {
+        margin-bottom: 35px !important;
+        margin-top: 30px;
+        height: 45px;
+        .button-orange;
+    }
+    .videochat-popup-success {
+        p {
+            .content-10;
+        }
+    }
+}
+
+#appointment-popup {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: @white;
+    z-index: 1000;
+    top: -15px;
+    height: auto;
+    width: 500px;
+    @media (max-width: @screen-xs-min) {
+        height: auto;
+        top: 0;
+        width: 100%;
+    }
+    .exit-popup {
+        background: rgba(0, 0, 0, 0) url("../images/icons/x-grey-small.png") no-repeat scroll 0 0;
+        background-image:
+                -webkit-image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        background-image:
+                image-set(
+                        url("../images/icons/x-grey-small@2x.png") 2x,
+                        url("../images/icons/x-grey-small@3x.png") 3x,
+                );
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right:14px;
+        height: 10px;
+        width: 10px;
+    }
+    .popup-title {
+        margin-bottom: 29px;
+        margin-top: 0;
+        .icon {
+            background: rgba(0, 0, 0, 0) url("../images/icons/video-chat.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/icons/video-chat@2x.png") 2x,
+                            url("../images/icons/video-chat@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/icons/video-chat@2x.png") 2x,
+                            url("../images/icons/video-chat@3x.png") 3x,
+                    );
+            display: inline-flex;
+            height: 13px;
+            margin-left: 11px;
+            width: 24px;
+        }
+    }
+    .disclaimer-text {
+        right: 0;
+        left: 0;
+        margin: auto auto 35px;
+        width: 429px;
+        .content-10;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        p {
+            margin: 0;
+            @media (max-width: @screen-xs-min) {
+                margin: 12px;
+            }
+        }
+    }
+    .appointment-details-container {
+        border: solid 1px @vhi-light-grey;
+        height: auto;
+        width: 429px;
+        left: 0;
+        right: 0;
+        margin: 30px auto 0;
+        @media (max-width: @screen-xs-min) {
+            height: auto;
+            width: 100%;
+        }
+        .label {
+            .content-9;
+        }
+        .appointment-details-inner-container {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 285px;
+            .callback-input {
+                width: 285px;
+                height: 44px;
+                background-color: @white;
+                border: solid 1px @light-grey;
+            }
+            .name-box {
+                display: inline-grid;
+                margin-top: 30px;
+            }
+            .phone-box {
+                display: inline-grid;
+                margin-top: 17px;
+            }
+            .date-box {
+                display: inline-grid;
+                margin-top: 11px;
+            }
+        }
+        .appointment-error {
+            p {
+                color: @red;
+            }
+        }
+    }
+    #appointment-submit-btn {
+        margin-bottom: 35px !important;
+        margin-top: 30px;
+        height: 45px;
+        .button-orange;
+    }
+    #appointment-ok-btn {
+        margin-bottom: 35px !important;
+        margin-top: 30px;
+        height: 45px;
+        .button-orange;
+    }
+    .appointment-popup-success {
+        p {
+            .content-10;
+        }
+    }
+}

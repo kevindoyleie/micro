@@ -1,0 +1,62 @@
+@import "vhi-bootstrap/bootstrap-variables";
+@import "font-face-rules";
+@import "corporate-font-face-rules";
+
+@default-font-size: 14px;
+
+.font-mixin(@font, @fontWeight, @fontSize, @mobileFontSize: @fontSize) {
+  font-family: @font;
+  font-size: @fontSize;
+  font-weight: @fontWeight;
+  @media (max-width: @screen-xs-max) {
+    font-size: @mobileFontSize;
+  }
+}
+
+.open-sans-light(@mobileFontSize: @default-font-size, @fontSize: @default-font-size) {
+  .font-mixin("open_sanslight", normal, @fontSize, @mobileFontSize);
+}
+
+.open-sans-light-italic(@mobileFontSize: @default-font-size, @fontSize: @default-font-size) {
+  .font-mixin("open_sanslight_italic", normal, @fontSize, @mobileFontSize);
+}
+
+.open-sans-regular(@mobileFontSize: @default-font-size, @fontSize: @default-font-size) {
+  .font-mixin("open_sansregular", normal, @fontSize, @mobileFontSize);
+}
+
+.open-sans-regular-italic(@mobileFontSize: @default-font-size, @fontSize: @default-font-size) {
+  .font-mixin("open_sansitalic", normal, @fontSize, @mobileFontSize);
+}
+
+.open-sans-semi-bold(@mobileFontSize: @default-font-size, @fontSize: @default-font-size) {
+  .font-mixin("open_sanssemibold", normal, @fontSize, @mobileFontSize);
+}
+
+.open-sans-semi-bold-italic(@mobileFontSize: @default-font-size, @fontSize: @default-font-size) {
+  .font-mixin("open_sanssemibold_italic", normal, @fontSize, @mobileFontSize);
+}
+
+.open-sans-bold(@mobileFontSize: @default-font-size, @fontSize: @default-font-size) {
+  .font-mixin("open_sansbold", normal, @fontSize, @mobileFontSize);
+}
+
+.open-sans-bold-italic(@mobileFontSize: @default-font-size, @fontSize: @default-font-size) {
+  .font-mixin("open_sansbold_italic", normal, @fontSize, @mobileFontSize);
+}
+
+.open-sans-extra-bold(@mobileFontSize: @default-font-size, @fontSize: @default-font-size) {
+  .font-mixin("open_sansextrabold", normal, @fontSize, @mobileFontSize);
+}
+
+.open-sans-extra-bold-italic(@mobileFontSize: @default-font-size, @fontSize: @default-font-size) {
+  .font-mixin("open_sansextrabold_italic", normal, @fontSize, @mobileFontSize);
+}
+
+.libre-baskerville(@mobileFontSize: @default-font-size, @fontSize: @default-font-size) {
+  .font-mixin("libre_baskerville", normal, @fontSize, @mobileFontSize);
+}
+
+.libre-baskerville-bold(@mobileFontSize: @default-font-size, @fontSize: @default-font-size) {
+  .font-mixin("libre_baskerville", bold, @fontSize, @mobileFontSize);
+}

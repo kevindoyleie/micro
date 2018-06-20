@@ -1,0 +1,47 @@
+@import "components/base-styles";
+
+#footer-container {
+    background-color: white;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.25);
+    clear: both;
+    height: 328px;
+    margin-top: 53px;
+    overflow: hidden;
+    position: relative;
+    .authorization-footer-container {
+        padding: 0;
+        clear: none;
+        background-color: white;
+        .authorization-footer-inner-container {
+            margin: auto;
+            padding: 18px 40px 12px;
+            img {
+                margin-bottom: 12px;
+                vertical-align: middle;
+                width: 93px;
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+    #footer-wrapper {
+        background-color: @black;
+        #footer {
+            height: 198px;
+        }
+        .main-footer-inner-container {
+            bottom: 0;
+            margin: auto;
+            padding: 25px 80px;
+            position: absolute;
+            width: 100%;
+            .main-footer-copyrights {
+                margin-top: 30px;
+                color: @white;
+                text-align: center;
+                .footer-1;
+            }
+        }
+    }
+}

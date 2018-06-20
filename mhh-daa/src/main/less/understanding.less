@@ -1,0 +1,38 @@
+@import "components/base-styles";
+
+#understanding {
+    margin-top: 50px;
+    .title {
+        margin-top: 36px;
+        .header-4;
+    }
+    .description {
+        margin-top: 25px;
+        .content-3;
+    }
+    .button-container {
+        @media (max-width: @screen-sm-min) {
+            text-align: center;
+        }
+    }
+    .panel-5 {
+        background-image: url("../images/MH-Services.jpg");
+        background-size: cover;
+        box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.25);
+        height: 250px;
+    }
+    .white {
+        background-color: white;
+        box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.25);
+        height: 250px;
+        @media (max-width: @screen-sm-min) {
+            height: auto;
+        }
+        #see-more {
+            .button-white-smoke;
+            display: inline-block;
+            margin-bottom: 36px;
+            margin-top: 41px;
+        }
+    }
+}

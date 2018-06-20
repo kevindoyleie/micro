@@ -1,0 +1,78 @@
+@default-padding: 20px;
+@default-margin: 20px;
+
+.heroImageMixin(@max-desktop-width: @max-hero-image-width) {
+  .hero-images {
+    img {
+      //position: relative;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%;
+      max-width: @max-hero-image-width;
+
+      @media (@screen-md-max) {
+        max-width: @screen-md ;
+      }
+      @media (max-width: @screen-sm-max) {
+        max-width: @screen-sm;
+      }
+      @media (max-width: @screen-xs-max) {
+        max-width: @screen-xs;
+        min-width: @screen-xs;
+      }
+    }
+
+  }
+}
+
+.vertical-padding-mixin(@padding-top: @default-padding, @padding-bottom: @padding-top) {
+  padding-top: @padding-top;
+  padding-bottom: @padding-bottom;
+}
+
+.horizontal-padding-mixin(@padding-left: @default-padding, @padding-right: @padding-left) {
+  padding-left: @padding-left;
+  padding-right: @padding-right;
+}
+
+.vertical-margin-mixin(@margin-top: @default-margin, @margin-bottom: @margin-top) {
+  margin-top: @margin-top;
+  margin-bottom: @margin-bottom;
+}
+
+.horizontal-margin-mixin(@margin-left: @default-margin, @margin-right: @margin-left) {
+  margin-left: @margin-left;
+  margin-right: @margin-right;
+}
+
+// Responsive media query templates
+.responsive-min (@minWidth, @rules) {
+    @media only screen and (min-width: @minWidth) {
+        @rules();
+    }
+}
+
+
+.responsive-sm-min (@rules) {
+    .responsive-min(@screen-sm-min, @rules);	
+}
+
+.responsive-md-min (@rules) {
+    .responsive-min(@screen-md-min, @rules);	
+}
+
+.responsive-max (@maxWidth, @rules) {
+    @media only screen and (max-width: @maxWidth) {
+        @rules();
+    }
+}
+
+.responsive-xs-max (@rules) {
+    .responsive-max(@screen-xs-max, @rules);	
+}
+
+.responsive-sm-max (@rules) {
+    .responsive-max(@screen-sm-max, @rules);	
+}
+	

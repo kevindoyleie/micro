@@ -1,0 +1,141 @@
+@import "components/base-styles";
+
+#tools-info-panel {
+    margin-top: 53px;
+    .title {
+        .header-1;
+        cursor: pointer;
+    }
+    .slider {
+        margin: 0 auto;
+    }
+    .slick-slide {
+        height: 515px !important;
+        @media (max-width: @screen-sm-min) {
+            height: 490px !important;
+            text-align: center;
+        }
+        @media (min-width: @screen-md-min) {
+            width: 342px;
+        }
+    }
+    .slick-prev {
+        left: -50px;
+        &:before {
+            content: "<";
+            color: @light-grey;
+            font-size: 40px;
+        }
+    }
+    .slick-next {
+        right: -50px;
+        &:before {
+            content: ">";
+            color: @light-grey;
+            font-size: 40px;
+        }
+    }
+    .slick-dots li button:before
+    {
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .blogs {
+        .slick-center {
+            .blog-panel {
+                opacity: 1;
+                transform: scale(1.0);
+            }
+        }
+    }
+    .blog-panel {
+        margin: 53px auto 0;
+        opacity: 0.6;
+        transform: scale(0.8);
+        @media (max-width: @screen-xs-max) {
+            margin-top: 29px;
+            height: 376px !important;
+            width: 274px !important;
+        }
+        @media (min-width: @screen-sm-min) {
+            margin-top: 29px;
+            height: 400px !important;
+            width: 342px !important;
+            transform: scale(1.0);
+        }
+        @media (min-width: @screen-md-min) {
+            transform: scale(0.8);
+        }
+        .panel-1 {
+            background-image: url("../images/carousel/understanding-280x218.jpg");
+            cursor: pointer;
+        }
+        .panel-2 {
+            background-image: url("../images/carousel/tantrums-280x218.jpg");
+            cursor: pointer;
+        }
+        .panel-3 {
+            background-image: url("../images/carousel/baby-blues-280x218.jpg");
+            background-position: 0 25% !important;
+            cursor: pointer;
+        }
+        .panel-4 {
+            background-image: url("../images/carousel/cope-with-loss-280x218.jpg");
+            cursor: pointer;
+        }
+        .panel-5 {
+            background-image: url("../images/carousel/unplug-from-technology-280x218.jpg");
+            cursor: pointer;
+        }
+        .panel-6 {
+            background-image: url("../images/carousel/dealing-with-social-anxiety-280x218.jpg");
+            cursor: pointer;
+        }
+        .panel-7 {
+            background-image: url("../images/carousel/combating-workplace-bullying-280x218.jpg");
+            cursor: pointer;
+        }
+        .panel-8 {
+            background-image: url("../images/carousel/parenting-expert-niamh-hannan-280x218.jpg");
+            cursor: pointer;
+        }
+        .panel-9 {
+            background-image: url("../images/carousel/3-benefits-to-paying-it-forward-280x218.jpg");
+            cursor: pointer;
+        }
+        .panel-10 {
+            background-image: url("../images/carousel/keeping-on-top-of-stress-at-work-280x218.jpg");
+            cursor: pointer;
+        }
+        .panel-11 {
+            background-image: url("../images/carousel/depression-recognising-the-subtle-signs-280x218.jpg");
+            cursor: pointer;
+        }
+        .blog-image {
+            height: 150px;
+            background-position: center;
+            background-size: cover;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.25);
+        }
+        .blog-container {
+            background-color: @white;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.25);
+            .title {
+                .header-4;
+                margin-top: 16px;
+                @media (max-width: @screen-sm-min) {
+                    margin-top: 0;
+                }
+            }
+            .description {
+                .content-3;
+                margin-top: 16px;
+            }
+            .blog-link {
+                .button-white-smoke;
+                margin-bottom: 28px;
+                margin-top: 22px;
+            }
+        }
+    }
+}

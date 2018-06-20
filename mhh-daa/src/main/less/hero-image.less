@@ -1,0 +1,268 @@
+@import "components/base-styles";
+
+#header-wrapper {
+    height: inherit;
+    padding-top: 0;
+    background: @topaz url("../images/Hero-Image.jpg");
+    background-position-y: 75%;
+    background-size: 100%;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.25);
+    margin-top: 132px;
+    @media (max-width: @screen-xs-min) {
+        background-size: cover;
+        margin-top: 105px;
+    }
+    @media (max-width: @screen-sm-min) {
+        background-size: cover;
+        margin-top: 90px;
+    }
+    [data-img] {
+        background: linear-gradient(to top, rgba(153, 62, 170, 0.01), #1db3ce);
+        height: 380px !important;
+        padding-bottom: 0 !important;
+        @media (max-width: @screen-sm-min) {
+            height: 490px !important;
+            position: relative;
+        }
+    }
+    #header {
+        margin: auto 60px;
+        padding-top: 0;
+        @media (max-width: @screen-sm-min) {
+            margin: auto 20px;
+        }
+    }
+    .title {
+        margin-top: 40px;
+        @media (max-width: @screen-xs-min) {
+            margin-top: 30px;
+        }
+        .header-3;
+    }
+    .description {
+        margin: 10px 20px;
+        .content-2;
+        @media (max-width: @screen-xs-min) {
+            line-height: 18px;
+        }
+    }
+    #hero-image-icons {
+        position: relative;
+        top: 10%;
+        @media (max-width: @screen-xs-min) {
+            top: 5%;
+        }
+        #icons {
+            text-align: center;
+            @media (max-width: @screen-sm-min) {
+                display: inline-flex;
+            }
+            .help-icon {
+                width: 67px;
+                height: 67px;
+                object-fit: contain;
+                &:hover {
+
+                }
+            }
+            .icon {
+                background-size: contain;
+                display: inline-block;
+                height: 67px;
+                width: 67px;
+                text-align: center;
+                margin-bottom: 7px;
+            }
+            #check-mood-container {
+                cursor: pointer;
+                .icon {
+                    background: url("../images/icons/check-your-mood-icon.png") center;
+                    background-image:
+                            -webkit-image-set(
+                                    url("../images/icons/check-your-mood-icon@2x.png") 2x,
+                                    url("../images/icons/check-your-mood-icon@3x.png") 3x,
+                            );
+                    background-image:
+                            image-set(
+                                    url("../images/icons/check-your-mood-icon@2x.png") 2x,
+                                    url("../images/icons/check-your-mood-icon@3x.png") 3x,
+                            );
+                    &:hover {
+                        background-image: url("../images/icons/check-your-mood-hover-icon.png");
+                        background-image:
+                                -webkit-image-set(
+                                        url("../images/icons/check-your-mood-hover-icon@2x.png") 2x,
+                                        url("../images/icons/check-your-mood-hover-icon@3x.png") 3x,
+                                );
+                        background-image:
+                                image-set(
+                                        url("../images/icons/check-your-mood-hover-icon@2x.png") 2x,
+                                        url("../images/icons/check-your-mood-hover-icon@3x.png") 3x,
+                                );
+                    }
+                    &:focus {
+                        background-image: url("../images/icons/check-your-mood-select-icon.png");
+                        background-image:
+                                -webkit-image-set(
+                                        url("../images/icons/check-your-mood-select-icon@2x.png") 2x,
+                                        url("../images/icons/check-your-mood-select-icon@3x.png") 3x,
+                                );
+                        background-image:
+                                image-set(
+                                        url("../images/icons/check-your-mood-select-icon@2x.png") 2x,
+                                        url("../images/icons/check-your-mood-select-icon@3x.png") 3x,
+                                );
+                    }
+                }
+                @media (min-width: @screen-sm-min) {
+                    display: inline-block;
+                }
+                .help-panel-icon-text {
+                    .link-2;
+                    @media (max-width: @screen-xs-min) {
+                        line-height: 16px;
+                    }
+                }
+            }
+            #tools-info-container {
+                cursor: pointer;
+                .icon {
+                    background: url("../images/icons/tools-information-icon.png") center;
+                    background-image:
+                            -webkit-image-set(
+                                    url("../images/icons/tools-information-icon@2x.png") 2x,
+                                    url("../images/icons/tools-information-icon@3x.png") 3x,
+                            );
+                    background-image:
+                            image-set(
+                                    url("../images/icons/tools-information-icon@2x.png") 2x,
+                                    url("../images/icons/tools-information-icon@3x.png") 3x,
+                            );
+                    &:hover {
+                        background-image: url("../images/icons/tools-information-hover-icon.png");
+                        background-image:
+                                -webkit-image-set(
+                                        url("../images/icons/tools-information-hover-icon@2x.png") 2x,
+                                        url("../images/icons/tools-information-hover-icon@3x.png") 3x,
+                                );
+                        background-image:
+                                image-set(
+                                        url("../images/icons/tools-information-hover-icon@2x.png") 2x,
+                                        url("../images/icons/tools-information-hover-icon@3x.png") 3x,
+                                );
+                    }
+                    &:focus {
+                        background-image: url("../images/icons/tools-information-select-icon.png");
+                        background-image:
+                                -webkit-image-set(
+                                        url("../images/icons/tools-information-select-icon@2x.png") 2x,
+                                        url("../images/icons/tools-information-select-icon@3x.png") 3x,
+                                );
+                        background-image:
+                                image-set(
+                                        url("../images/icons/tools-information-select-icon@2x.png") 2x,
+                                        url("../images/icons/tools-information-select-icon@3x.png") 3x,
+                                );
+                    }
+                }
+                @media (min-width: @screen-sm-min) {
+                    display: inline-block;
+                }
+                .help-panel-icon-text {
+                    .link-2;
+                    @media (max-width: @screen-xs-min) {
+                        line-height: 16px;
+                    }
+                }
+            }
+            #get-support-now-container {
+                cursor: pointer;
+                .icon {
+                    background: url("../images/icons/get-support-now-icon.png") center;
+                    background-image:
+                            -webkit-image-set(
+                                    url("../images/icons/get-support-now-icon@2x.png") 2x,
+                                    url("../images/icons/get-support-now-icon@3x.png") 3x,
+                            );
+                    background-image:
+                            image-set(
+                                    url("../images/icons/get-support-now-icon@2x.png") 2x,
+                                    url("../images/icons/get-support-now-icon@3x.png") 3x,
+                            );
+                    &:hover {
+                        background-image: url("../images/icons/get-support-now-hover-icon.png");
+                        background-image:
+                                -webkit-image-set(
+                                        url("../images/icons/get-support-now-hover-icon@2x.png") 2x,
+                                        url("../images/icons/get-support-now-hover-icon@3x.png") 3x,
+                                );
+                        background-image:
+                                image-set(
+                                        url("../images/icons/get-support-now-hover-icon@2x.png") 2x,
+                                        url("../images/icons/get-support-now-hover-icon@3x.png") 3x,
+                                );
+                    }
+                    &:focus {
+                        background-image: url("../images/icons/get-support-now-select-icon.png");
+                        background-image:
+                                -webkit-image-set(
+                                        url("../images/icons/get-support-now-select-icon@2x.png") 2x,
+                                        url("../images/icons/get-support-now-select-icon@3x.png") 3x,
+                                );
+                        background-image:
+                                image-set(
+                                        url("../images/icons/get-support-now-select-icon@2x.png") 2x,
+                                        url("../images/icons/get-support-now-select-icon@3x.png") 3x,
+                                );
+                    }
+                }
+                @media (min-width: @screen-sm-min) {
+                    display: inline-block;
+                }
+                .help-panel-icon-text {
+                    .link-2;
+                    @media (max-width: @screen-xs-min) {
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+    }
+    #crisis-support-info-triangle {
+        width: 0;
+        height: 0;
+        float: right;
+        cursor: pointer;
+        border-bottom: 170px solid @white;
+        border-left: 170px solid transparent;
+        .crisis-info-icon {
+            background: rgba(0, 0, 0, 0) url("../images/icons/crisis-small.png") no-repeat scroll 0 0;
+            background-image:
+                    -webkit-image-set(
+                            url("../images/icons/crisis-small@2x.png") 2x,
+                            url("../images/icons/crisis-small@3x.png") 3x,
+                    );
+            background-image:
+                    image-set(
+                            url("../images/icons/crisis-small@2x.png") 2x,
+                            url("../images/icons/crisis-small@3x.png") 3x,
+                    );
+            float: right;
+            height: 32px;
+            width: 32px;
+            top: 50px;
+            position: relative;
+            right: 12px;
+        }
+        .crisis-info-text {
+            float: right;
+            bottom: 0;
+            position: relative;
+            text-align: right !important;
+            top: 60px;
+            right: 12px;
+            .content-4;
+            line-height: normal;
+        }
+    }
+}

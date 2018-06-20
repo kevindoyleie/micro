@@ -1,0 +1,48 @@
+@import "components/base-styles";
+
+#feedback {
+    #feedback-btn {
+        border: none;
+        position: fixed !important;
+        margin-top: 0;
+        height: auto !important;
+        .feedback-btn {
+            cursor: pointer;
+            position: absolute;
+            background-color: @vhi-violette;
+            color: @white;
+            height: 35px;
+            min-height: 35px;
+            max-height: 35px;
+            width: 125px;
+            min-width: 125px;
+            max-width: 125px;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .feedback-btn-text {
+            color: @white;
+            font-size: 14px;
+            font-weight: normal !important;
+            line-height: 35px;
+            text-align: center;
+        }
+    }
+    .vertical-button {
+        background-color: transparent !important;
+        top: 80%;
+        z-index: 99999990;
+        transform: rotate(90deg);
+        height: 35px;
+        min-height: 35px;
+        max-height: 35px;
+        width: 125px;
+        min-width: 125px;
+        max-width: 125px;
+    }
+    .vertical-button.right-button {
+        padding: 0 !important;
+        right: -45px;
+    }
+}
